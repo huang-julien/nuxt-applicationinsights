@@ -1,13 +1,11 @@
 import { defineNuxtModule, createResolver, addServerPlugin, normalizeModuleTranspilePath, addTypeTemplate, resolvePath } from '@nuxt/kit'
-import { defu } from "defu"
-import { readFileSync } from 'fs'
 // Module options TypeScript interface definition
 export interface ModuleOptions { }
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: 'my-module',
-    configKey: 'myModule'
+    name: 'nuxt-applicationinsights',
+    configKey: 'applicationinsights',
   },
   // Default configuration options of the Nuxt module
   defaults: {},
