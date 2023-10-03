@@ -1,6 +1,3 @@
 {
-  "extends": "./.nuxt/tsconfig.json",
-  "compilerOptions": {
-    "module": "nodenext"
-  }
+  "extends": "./playground/.nuxt/tsconfig.json"
 }
