@@ -1,6 +1,8 @@
-import { defineNuxtModule, createResolver, addServerPlugin, normalizeModuleTranspilePath, addTypeTemplate, resolvePath } from '@nuxt/kit'
+import { defineNuxtModule, createResolver, addServerPlugin, addTypeTemplate } from '@nuxt/kit'
 // Module options TypeScript interface definition
-export interface ModuleOptions { }
+export interface ModuleOptions {
+
+}
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
@@ -15,20 +17,12 @@ export default defineNuxtModule<ModuleOptions>({
     addTypeTemplate({
       filename: 'types/nuxt-applicationinsights.d.ts',
        getContents() {
-        return `/// <reference types="nitro-applicationinsights/types" />`
+        return `/// <reference types="nitro-applicationinsights" />`
       }
     })
 
-    nuxt.hook('nitro:config', (config) => {
-      config.typescript = config.typescript || {}
-      config.typescript.tsConfig = config.typescript.tsConfig || {}
-      config.typescript.tsConfig.compilerOptions = config.typescript.tsConfig.compilerOptions || []
-      config.typescript.tsConfig.compilerOptions.types = config.typescript.tsConfig.compilerOptions.types || []
-      config.typescript.tsConfig.compilerOptions.types.push('nitro-applicationinsights')
-    })
-
     nuxt.hook('prepare:types', ({ references }) => {
-      references.push({ path: './types/nitro-applicationinsights' })
+      references.push({ path: './types/nuxt-applicationinsights.d.ts' })
     })
 
     addServerPlugin(resolver.resolve('./runtime/server/plugins/applicationinsights'))
