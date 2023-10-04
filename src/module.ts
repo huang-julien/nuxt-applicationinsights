@@ -1,4 +1,5 @@
-import { defineNuxtModule, createResolver, addServerPlugin, addTypeTemplate } from '@nuxt/kit'
+import { defineNuxtModule, createResolver, addServerPlugin, addTypeTemplate, addPlugin } from '@nuxt/kit'
+
 // Module options TypeScript interface definition
 export interface ModuleOptions {
 
@@ -25,6 +26,10 @@ export default defineNuxtModule<ModuleOptions>({
       references.push({ path: './types/nuxt-applicationinsights.d.ts' })
     })
 
+    addPlugin({
+      src: resolver.resolve('./runtime/app/plugin.server'),
+      mode: 'server',
+    })
     addServerPlugin(resolver.resolve('./runtime/server/plugins/applicationinsights'))
   }
 })
