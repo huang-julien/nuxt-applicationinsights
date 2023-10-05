@@ -18,8 +18,8 @@ dependencies:
     specifier: ^6.1.2
     version: 6.1.2
   nitro-applicationinsights:
-    specifier: 0.1.1
-    version: 0.1.1(eslint@8.50.0)(typescript@5.2.2)
+    specifier: 0.1.2
+    version: 0.1.2(eslint@8.50.0)(typescript@5.2.2)
   nitropack:
     specifier: ^2.6.3
     version: 2.6.3
@@ -5471,8 +5471,8 @@ packages:
     engines: {node: '>= 0.6'}
     dev: true
 
-  /nitro-applicationinsights@0.1.1(eslint@8.50.0)(typescript@5.2.2):
-    resolution: {integrity: sha512-YbkePDTzWmIgvugvj3V91W/wVsugdrMMTrCmrHhXwq9rHAkI+ZGlab3qzIN+ey63VeTJ1NA8TTVl/lEHUJ/pFA==}
+  /nitro-applicationinsights@0.1.2(eslint@8.50.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-cAKx/Gt9XJsypHMoM684w5uFxNnzbtzdRx9Lb9YLAR5mbronikZAJN7FtuzF6XNmCLiPmFU66dwnLhnNp3wVHg==}
     dependencies:
       '@nuxtjs/eslint-config-typescript': 12.1.0(eslint@8.50.0)(typescript@5.2.2)
       applicationinsights: 2.8.0
