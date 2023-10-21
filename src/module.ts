@@ -1,11 +1,14 @@
 import { defineNuxtModule, createResolver, addServerPlugin, addTypeTemplate, addPlugin } from '@nuxt/kit'
 import { TNitroAppInsightsConfig } from 'nitro-applicationinsights'
 import { defu } from 'defu'
+import { Snippet } from '@microsoft/applicationinsights-web'
 
 // Module options TypeScript interface definition
 export interface ApplicationInsightModuleOptions {
   serverEnabled: boolean
+  clientEnabled: boolean
   serverConfig?: Partial<TNitroAppInsightsConfig>
+  clientConfig?: Partial<Snippet>
 }
 
 export default defineNuxtModule<ApplicationInsightModuleOptions>({
@@ -15,13 +18,18 @@ export default defineNuxtModule<ApplicationInsightModuleOptions>({
   },
   // Default configuration options of the Nuxt module
   defaults: {
-    serverEnabled: true
+    serverEnabled: true,
+    clientEnabled: true
   },
   async setup(options, nuxt) {
     const resolver = createResolver(import.meta.url)
 
     nuxt.options.runtimeConfig.applicationinsights = defu(nuxt.options.runtimeConfig.applicationinsights || {},      
       options.serverConfig
+    )
+
+    nuxt.options.runtimeConfig.public.applicationinsights = defu(nuxt.options.runtimeConfig.public.applicationinsights || {},      
+      options.clientConfig
     )
 
     addTypeTemplate({
@@ -39,6 +47,11 @@ export default defineNuxtModule<ApplicationInsightModuleOptions>({
     addPlugin({
       src: resolver.resolve('./runtime/app/plugin.server'),
       mode: 'server',
+    })
+
+    addPlugin({
+      src: resolver.resolve('./runtime/app/plugin.client'),
+      mode: 'client',
     })
 
     // init config
