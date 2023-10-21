@@ -4,6 +4,6 @@ export default defineNitroPlugin((nitro) => {
     const runtimeConfig = useRuntimeConfig()
     
     nitro.hooks.hook('applicationinsights:config', (config) => {
-        Object.assign(config, runtimeConfig.applicationInsights)
+        Object.assign(config, runtimeConfig.applicationinsights)
     })
 })
