@@ -1,5 +1,6 @@
 import { defineNuxtModule, createResolver, addServerPlugin, addTypeTemplate, addPlugin } from '@nuxt/kit'
 import { TNitroAppInsightsConfig } from 'nitro-applicationinsights'
+import { defu } from 'defu'
 
 // Module options TypeScript interface definition
 export interface ApplicationInsightModuleOptions {
@@ -19,10 +20,9 @@ export default defineNuxtModule<ApplicationInsightModuleOptions>({
   async setup(options, nuxt) {
     const resolver = createResolver(import.meta.url)
 
-    nuxt.options.runtimeConfig = {
-      ...nuxt.options.runtimeConfig,
-      applicationInsights: options.serverConfig ?? {}
-    }
+    nuxt.options.runtimeConfig.applicationinsights = defu(nuxt.options.runtimeConfig.applicationinsights || {},      
+      options.serverConfig
+    )
 
     addTypeTemplate({
       filename: 'types/nuxt-applicationinsights.d.ts',
