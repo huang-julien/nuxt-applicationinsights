@@ -3,9 +3,14 @@ import { TNitroAppInsightsConfig } from 'nitro-applicationinsights'
 import { defu } from 'defu'
 import { Snippet } from '@microsoft/applicationinsights-web'
 
-// Module options TypeScript interface definition
 export interface ApplicationInsightModuleOptions {
+  /**
+   * Enable server side application insights with nitro-applicationinsights
+   */
   serverEnabled: boolean
+  /**
+   * Enable client side application insights with @microsoft/applicationinsights-web
+   */
   clientEnabled: boolean
   serverConfig?: Partial<TNitroAppInsightsConfig>
   clientConfig?: Partial<Snippet>
@@ -44,19 +49,23 @@ export default defineNuxtModule<ApplicationInsightModuleOptions>({
       references.push({ path: resolver.resolve('./runtime/types.d.ts') })
     })
 
-    addPlugin({
-      src: resolver.resolve('./runtime/app/plugin.server'),
-      mode: 'server',
-    })
+    if(options.serverEnabled) {
+      addPlugin({
+        src: resolver.resolve('./runtime/app/plugin.server'),
+        mode: 'server',
+      })
+      
+      // init config
+      addServerPlugin(resolver.resolve('./runtime/server/plugins/setup.ts'))
+      // awaiting for nitro module to transform nitro-applicationinsights into a nitro module
+      addServerPlugin(resolver.resolve('./runtime/server/plugins/applicationinsights'))
+    }
 
-    addPlugin({
-      src: resolver.resolve('./runtime/app/plugin.client'),
-      mode: 'client',
-    })
-
-    // init config
-    addServerPlugin(resolver.resolve('./runtime/server/plugins/setup.ts'))
-    // awaiting for nitro module to transform nitro-applicationinsights into a nitro module
-    addServerPlugin(resolver.resolve('./runtime/server/plugins/applicationinsights'))
+    if(options.clientEnabled) {
+      addPlugin({
+        src: resolver.resolve('./runtime/app/plugin.client'),
+        mode: 'client',
+      })
+    }
   }
 })
