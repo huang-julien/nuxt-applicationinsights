@@ -9,7 +9,7 @@ Find and replace all on all files (CMD+SHIFT+F):
 
 # nuxt-applicationinsights
 
-(Microsoft Application Insight)[https://learn.microsoft.com/fr-fr/azure/azure-monitor/app/app-insights-overview?tabs=net] integration for Nuxt 3.
+[Microsoft Application Insight](https://learn.microsoft.com/fr-fr/azure/azure-monitor/app/app-insights-overview?tabs=net) integration for Nuxt 3.
 
 <!-- - [🏀 Online playground](https://stackblitz.com/github/your-org/my-module?file=playground%2Fapp.vue) -->
 <!-- - [📖 &nbsp;Documentation](https://example.com) -->
@@ -17,8 +17,8 @@ Find and replace all on all files (CMD+SHIFT+F):
 ## Features
 
 <!-- Highlight some of the features your module provide here -->
-- (nitro-applicationinsights)[https://github.com/huang-julien/nitro-applicationinsights] integration
-- (@microsoft/applicationinsights-web)[https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwikrM-2somCAxU0RqQEHbTkBBMQFnoECBMQAQ&url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40microsoft%2Fapplicationinsights-web&usg=AOvVaw0YBh7uJXG97fkuIACO0LBh&opi=89978449] integration
+- [nitro-applicationinsights](https://github.com/huang-julien/nitro-applicationinsights) integration
+- [@microsoft/applicationinsights-web](https://www.npmjs.com/package/@microsoft/applicationinsights-web) integration
 
 ## Quick Setup
 
