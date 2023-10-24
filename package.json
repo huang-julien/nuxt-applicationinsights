@@ -1,8 +1,8 @@
 {
-  "name": "my-module",
-  "version": "1.0.0",
-  "description": "My new Nuxt module",
-  "repository": "your-org/my-module",
+  "name": "nuxt-applicationinsights",
+  "version": "0.1.0",
+  "description": "Application insights integration for Nuxt",
+  "repository": "huang-julien/nuxt-applicationinsights",
   "license": "MIT",
   "type": "module",
   "exports": {
