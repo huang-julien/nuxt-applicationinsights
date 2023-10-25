@@ -1,5 +1,6 @@
 import { defineNuxtPlugin } from "nuxt/app";
 import { ApplicationInsights } from "@microsoft/applicationinsights-web";
+import { useRuntimeConfig } from "#imports";
 
 export default defineNuxtPlugin({
     name: 'nuxt-applicationinsights:client',
