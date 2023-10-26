@@ -1,5 +1,5 @@
-import { Snippet } from "@microsoft/applicationinsights-web";
-import { TNitroAppInsightsConfig } from "nitro-applicationinsights";
+import type { Snippet } from "@microsoft/applicationinsights-web";
+import type { TNitroAppInsightsConfig } from "nitro-applicationinsights";
 
 
 declare module '@nuxt/schema' {

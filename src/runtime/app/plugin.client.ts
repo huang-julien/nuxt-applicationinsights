@@ -1,5 +1,6 @@
 import { defineNuxtPlugin } from "nuxt/app";
-import { ApplicationInsights, Snippet } from "@microsoft/applicationinsights-web";
+import { ApplicationInsights } from "@microsoft/applicationinsights-web";
+import type { Snippet } from "@microsoft/applicationinsights-web";
 import { useRuntimeConfig, toRaw } from "#imports";
 
 export default defineNuxtPlugin({

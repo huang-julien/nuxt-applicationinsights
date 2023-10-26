@@ -1,13 +1,15 @@
 import { defineNuxtPlugin } from "#imports"
+import type { H3Event } from "h3"
 
-export default defineNuxtPlugin({
+export default defineNuxtPlugin<{
+    appInsights: H3Event['$appInsights']
+}>({
     name: 'nuxt-applicationinsights:server',
-    setup(nuxtApp) {
-        const appInsights = nuxtApp.ssrContext!.event.$appInsights
+    setup(nuxtApp) { 
 
         return {
             provide: {
-                appInsights
+                appInsights: nuxtApp.ssrContext!.event.$appInsights
             }
         }
     }
