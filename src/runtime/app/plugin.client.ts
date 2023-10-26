@@ -1,5 +1,5 @@
 import { defineNuxtPlugin } from "nuxt/app";
-import { ApplicationInsights } from "@microsoft/applicationinsights-web";
+import { ApplicationInsights, Snippet } from "@microsoft/applicationinsights-web";
 import { useRuntimeConfig, toRaw } from "#imports";
 
 export default defineNuxtPlugin({
@@ -7,8 +7,8 @@ export default defineNuxtPlugin({
     setup() {
         const runtimeConfig = useRuntimeConfig()
 
-        const applicationInsights = new ApplicationInsights(toRaw(runtimeConfig.public.applicationinsights))
-
+        const applicationInsights = new ApplicationInsights(toRaw(runtimeConfig.public.applicationinsights as Snippet))
+        applicationInsights.loadAppInsights()
         return {
             provide: {
                 appInsights: applicationInsights
