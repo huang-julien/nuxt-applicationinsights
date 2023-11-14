@@ -32,7 +32,7 @@
     "@nuxt/kit": "^3.7.4",
     "applicationinsights": "^2.8.0",
     "defu": "^6.1.2",
-    "nitro-applicationinsights": "0.1.6",
+    "nitro-applicationinsights": "^0.2.0",
     "nitropack": "^2.6.3"
   },
   "devDependencies": {
