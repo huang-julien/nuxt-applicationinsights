@@ -1,12 +1,3 @@
-<!--
-Get your module up and running quickly.
-
-Find and replace all on all files (CMD+SHIFT+F):
-- Name: My Module
-- Package name: my-module
-- Description: My new Nuxt module
--->
-
 # nuxt-applicationinsights
 
 [Microsoft Application Insight](https://learn.microsoft.com/fr-fr/azure/azure-monitor/app/app-insights-overview?tabs=net) integration for Nuxt 3.
@@ -46,6 +37,15 @@ export default defineNuxtConfig({
 ```
 
 That's it! You can now use `nuxt-applicationinsights` in your Nuxt app ✨
+
+## Usage
+
+`nitro-applicationinsights` will track each request and errors while `@microsoft/applicationinsights-web` will track client-side events. 
+
+## nuxt app context
+
+Application insights client is available at `useNuxtApp().$appInsights`.
+It is accessible in server and client environment. However types are not the same since it is a `TelemetryClient` from `applicationinsights` server side and an `ApplicationInsights` from `@microsoft/applicationinsights-web` client-side.
 
 ## Development
 
