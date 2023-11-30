@@ -5,6 +5,11 @@ import type { Snippet } from '@microsoft/applicationinsights-web'
 
 export interface ApplicationInsightModuleOptions {
   /**
+   * Application insights connection string
+   * Can be overriden by serverConfig, clientConfig or runtimeConfig
+   */
+  connectionString?: string
+  /**
    * Enable server side application insights with nitro-applicationinsights
    */
   serverEnabled: boolean
@@ -30,11 +35,15 @@ export default defineNuxtModule<ApplicationInsightModuleOptions>({
     const resolver = createResolver(import.meta.url)
 
     nuxt.options.runtimeConfig.applicationinsights = defu(nuxt.options.runtimeConfig.applicationinsights || {},      
-      options.serverConfig
+      Object.assign({}, { connectionString: options.connectionString }, options.serverConfig) as Partial<TNitroAppInsightsConfig>
     )
 
     nuxt.options.runtimeConfig.public.applicationinsights = defu(nuxt.options.runtimeConfig.public.applicationinsights || {},      
-      options.clientConfig
+       options.clientConfig, {
+        config: {
+          connectionString: options.connectionString
+        }
+       } as Partial<Snippet>
     )
 
     addTypeTemplate({
