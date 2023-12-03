@@ -1,11 +1,14 @@
 import { defineNuxtPlugin } from "#imports"
-import type { H3Event } from "h3"
+import { type H3Event, setResponseHeader } from "h3"
+import { INITIAL_TRACE_KEY } from "./utils"
 
 export default defineNuxtPlugin<{
     appInsights: H3Event['$appInsights']
 }>({
     name: 'nuxt-applicationinsights:server',
-    setup(nuxtApp) { 
+    enforce: "pre",
+    setup(nuxtApp) {
+        nuxtApp.payload.data[INITIAL_TRACE_KEY] = nuxtApp.ssrContext!.event.$appInsights.initialTrace
 
         return {
             provide: {
