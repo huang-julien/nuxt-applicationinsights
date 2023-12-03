@@ -1,7 +1,7 @@
 import { defineNuxtPlugin } from "nuxt/app";
 import { ApplicationInsights, } from "@microsoft/applicationinsights-web";
- import type { Snippet } from "@microsoft/applicationinsights-web";
-import { useRuntimeConfig, toRaw, useRouter, useRoute } from "#imports";
+import type { Snippet } from "@microsoft/applicationinsights-web";
+import { useRuntimeConfig, toRaw, useRouter } from "#imports";
 import { createFetch } from "ofetch"
 import { generateW3CId } from "@microsoft/applicationinsights-core-js"
 import { INITIAL_TRACE_KEY } from "./utils"

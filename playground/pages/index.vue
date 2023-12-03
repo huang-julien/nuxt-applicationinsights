@@ -1,16 +1,17 @@
 <template>
+  <div>
+    <h1>Playground</h1>
+    <p>Playground</p>
+    <NuxtLink to="/second">
+      to second page
+    </NuxtLink>
 
-    <div>
-        <h1>Playground</h1>
-        <p>Playground</p>
-        <NuxtLink to="/second">
-            to second page
-        </NuxtLink>
+    <p>random number: {{ data }}</p>
 
-        <p>random number: {{ data }}</p>
-
-        <button @click="() => refresh()">refresh</button>
-    </div>
+    <button @click="() => refresh()">
+      refresh
+    </button>
+  </div>
 </template>
 
 

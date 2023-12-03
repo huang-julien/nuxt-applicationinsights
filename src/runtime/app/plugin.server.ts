@@ -1,5 +1,5 @@
 import { defineNuxtPlugin } from "#imports"
-import { type H3Event, setResponseHeader } from "h3"
+import { type H3Event } from "h3"
 import { INITIAL_TRACE_KEY } from "./utils"
 
 export default defineNuxtPlugin<{
