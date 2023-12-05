@@ -1,0 +1,1 @@
+export const INITIAL_TRACE_KEY = 'appinsights:initial-trace'
