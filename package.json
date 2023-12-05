@@ -5,6 +5,13 @@
   "repository": "huang-julien/nuxt-applicationinsights",
   "license": "MIT",
   "type": "module",
+  "keywords": [
+    "nuxt",
+    "applicationinsights",
+    "azure",
+    "microsoft",
+    "nuxt-module"
+  ],
   "exports": {
     ".": {
       "types": "./dist/types.d.ts",
