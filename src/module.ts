@@ -65,7 +65,7 @@ export default defineNuxtModule<ApplicationInsightModuleOptions>({
       })
       
       // init config
-      addServerPlugin(resolver.resolve('./runtime/server/plugins/setup.ts'))
+      addServerPlugin(resolver.resolve('./runtime/server/plugins/setup'))
       // awaiting for nitro module to transform nitro-applicationinsights into a nitro module
       addServerPlugin(resolver.resolve('./runtime/server/plugins/applicationinsights'))
     }
