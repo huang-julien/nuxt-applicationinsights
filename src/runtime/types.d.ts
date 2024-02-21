@@ -10,4 +10,12 @@ declare module '@nuxt/schema' {
     interface PublicRuntimeConfig {
         applicationinsights: Partial<Snippet>
     }
+
 }
+
+declare module '#app' {
+    interface RuntimeNuxtHooks {
+        'applicationinsights:config:client': (config: Snippet) => void
+    }
+}
+
