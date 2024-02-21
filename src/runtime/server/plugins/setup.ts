@@ -1,4 +1,4 @@
-import { NitroAppPlugin } from 'nitropack'
+import { type NitroAppPlugin } from 'nitropack'
 import { useRuntimeConfig } from '#imports'
 
 export default <NitroAppPlugin>((nitro) => {

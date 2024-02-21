@@ -1,10 +1,7 @@
 import { defineNuxtPlugin } from "#imports"
-import { type H3Event } from "h3"
 import { INITIAL_TRACE_KEY } from "./utils"
 
-export default defineNuxtPlugin<{
-    appInsights: H3Event['$appInsights']
-}>({
+export default defineNuxtPlugin({
     name: 'nuxt-applicationinsights:server',
     enforce: "pre",
     setup(nuxtApp) {
