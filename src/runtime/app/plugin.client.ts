@@ -7,15 +7,22 @@ import { generateW3CId } from "@microsoft/applicationinsights-core-js"
 import { INITIAL_TRACE_KEY } from "./utils"
  // @ts-expect-error virtual file
 import { baseURL } from "#build/paths.mjs"
+import { defu } from "defu"
  
 export default defineNuxtPlugin({
     name: 'nuxt-applicationinsights:client',
-    setup(nuxtApp) {
+    async setup(nuxtApp) {
         const runtimeConfig = useRuntimeConfig()
  
+        const config: Snippet = {
+            config: {}
+        }
+
+        await nuxtApp.callHook('applicationinsights:config:client', config)
+
         // @ts-expect-error
         delete globalThis.$fetch
-        const applicationInsights = new ApplicationInsights(toRaw(runtimeConfig.public.applicationinsights as Snippet))
+        const applicationInsights = new ApplicationInsights(defu(config, toRaw(runtimeConfig.public.applicationinsights as Snippet)))
      
         applicationInsights.loadAppInsights()
         applicationInsights.addTelemetryInitializer((item) => {
