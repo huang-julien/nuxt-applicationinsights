@@ -35,13 +35,12 @@
     "test:watch": "vitest watch"
   },
   "dependencies": {
-    "@microsoft/applicationinsights-core-js": "^3.0.5",
-    "@microsoft/applicationinsights-web": "^3.0.3",
-    "@nuxt/kit": "^3.7.4",
-    "applicationinsights": "^2.8.0",
+    "@microsoft/applicationinsights-core-js": "^3.1.0",
+    "@microsoft/applicationinsights-web": "^3.1.0",
+    "@nuxt/kit": "^3.10.2",
     "defu": "^6.1.2",
     "nitro-applicationinsights": "^0.3.1",
-    "nitropack": "^2.6.3"
+    "nitropack": "^2.8.1"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
@@ -52,7 +51,7 @@
     "@types/node": "^20.0.0",
     "changelogen": "^0.5.5",
     "eslint": "^8.50.0",
-    "nuxt": "^3.7.4",
+    "nuxt": "^3.10.2",
     "vitest": "^1.0.0"
   }
 }
