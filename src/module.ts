@@ -1,5 +1,5 @@
 import { defineNuxtModule, createResolver, addServerPlugin, addTypeTemplate, addPlugin } from '@nuxt/kit'
-import { TNitroAppInsightsConfig } from 'nitro-applicationinsights'
+import { type TNitroAppInsightsConfig } from 'nitro-applicationinsights'
 import { defu } from 'defu'
 import type { Snippet } from '@microsoft/applicationinsights-web'
 
