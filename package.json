@@ -1,6 +1,6 @@
 {
   "name": "nuxt-applicationinsights",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Application insights integration for Nuxt",
   "repository": "huang-julien/nuxt-applicationinsights",
   "license": "MIT",
