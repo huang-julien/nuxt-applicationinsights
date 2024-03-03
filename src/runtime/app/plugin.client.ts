@@ -32,7 +32,7 @@ export default defineNuxtPlugin({
             if (!item.tags) { item.tags = [] }
 
             if (item.baseType === 'PageviewData' || item.baseType === 'PageviewPerformanceData') {
-                item.tags['ai.operation.parentId'] = nuxtApp.payload.data[INITIAL_TRACE_KEY].split('-')[2]
+                item.tags['ai.operation.parentId'] = undefined
                 item.tags['ai.operation.id'] = nuxtApp.payload.data[INITIAL_TRACE_KEY].split('-')[1]
             } else {
                 item.tags['ai.operation.parentId'] = applicationInsights.context.telemetryTrace.traceID
@@ -40,7 +40,6 @@ export default defineNuxtPlugin({
             item.tags['ai.operation.id'] = nuxtApp.payload.data[INITIAL_TRACE_KEY].split('-')[1]
         })
         applicationInsights.context.telemetryTrace.traceID = generateW3CId()
-        applicationInsights.context.telemetryTrace.parentID = nuxtApp.payload.data[INITIAL_TRACE_KEY].split('-')[2]
 
         globalThis.$fetch = createFetch({
             defaults: {
@@ -53,7 +52,6 @@ export default defineNuxtPlugin({
         applicationInsights.trackPageView({ name: route.name as string })
         nuxtApp.hook('app:mounted', () => {
             router.beforeResolve((to) => {
-                applicationInsights.context.telemetryTrace.parentID = nuxtApp.payload.data[INITIAL_TRACE_KEY].split('-')[2]
                 applicationInsights.context.telemetryTrace.traceID = generateW3CId()
                 // TODO give users the choice between route name and route matched path
                 applicationInsights.trackPageView({ name: to.name as string })
