@@ -50,15 +50,15 @@ export default defineNuxtPlugin({
         const router = useRouter()
         // TODO give users the choice between route name and route matched path
         applicationInsights.trackPageView({ name: route.name as string })
-        nuxtApp.hook('app:mounted', () => {
-            router.beforeResolve((to) => {
-                applicationInsights.context.telemetryTrace.traceID = generateW3CId()
-                // TODO give users the choice between route name and route matched path
-                applicationInsights.trackPageView({ name: to.name as string })
-                applicationInsights.flush()
-            })
+
+        nuxtApp.hook('page:start', () => {
+            applicationInsights.startTrackPage(router.currentRoute.value.name as string)
         })
 
+        nuxtApp.hook('page:finish', () => {
+            applicationInsights.context.telemetryTrace.traceID = generateW3CId()
+            applicationInsights.stopTrackPage(router.currentRoute.value.name as string)
+        })
         return {
             provide: {
                 appInsights: applicationInsights
