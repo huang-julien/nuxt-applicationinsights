@@ -32,7 +32,7 @@ export default defineNuxtPlugin({
             if (!item.tags) { item.tags = [] }
 
             if (item.baseType === 'PageviewData' || item.baseType === 'PageviewPerformanceData') {
-                item.tags['ai.operation.parentId'] = undefined
+                delete item.tags['ai.operation.parentId']
                 item.tags['ai.operation.id'] = nuxtApp.payload.data[INITIAL_TRACE_KEY].split('-')[1]
             } else {
                 item.tags['ai.operation.parentId'] = applicationInsights.context.telemetryTrace.traceID
