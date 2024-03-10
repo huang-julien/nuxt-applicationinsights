@@ -8,7 +8,7 @@ declare module '@nuxt/schema' {
     }
 
     interface PublicRuntimeConfig {
-        applicationinsights: Partial<Snippet>
+        applicationinsights: Partial<Snippet['config']>
     }
 
 }
