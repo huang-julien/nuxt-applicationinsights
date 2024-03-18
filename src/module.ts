@@ -17,8 +17,6 @@ export interface ApplicationInsightModuleOptions {
    * Enable client side application insights with @microsoft/applicationinsights-web
    */
   clientEnabled: boolean
-  serverConfig?: Partial<TNitroAppInsightsConfig>
-  clientConfig?: Partial<Snippet>
 }
 
 export default defineNuxtModule<ApplicationInsightModuleOptions>({
@@ -33,18 +31,6 @@ export default defineNuxtModule<ApplicationInsightModuleOptions>({
   },
   async setup(options, nuxt) {
     const resolver = createResolver(import.meta.url)
-
-    nuxt.options.runtimeConfig.applicationinsights = defu(nuxt.options.runtimeConfig.applicationinsights || {},      
-      Object.assign({}, { connectionString: options.connectionString }, options.serverConfig) as Partial<TNitroAppInsightsConfig>
-    )
-
-    nuxt.options.runtimeConfig.public.applicationinsights = defu(nuxt.options.runtimeConfig.public.applicationinsights || {},      
-       options.clientConfig, {
-        config: {
-          connectionString: options.connectionString
-        }
-       } as Partial<Snippet>
-    )
 
     addTypeTemplate({
       filename: 'types/nuxt-applicationinsights.d.ts',
