@@ -2,6 +2,7 @@ import { defineNuxtModule, createResolver, addServerPlugin, addTypeTemplate, add
 import { type TNitroAppInsightsConfig } from 'nitro-applicationinsights'
 import { defu } from 'defu'
 import type { Snippet } from '@microsoft/applicationinsights-web'
+import { resolvePath } from "mlly"
 
 export interface ApplicationInsightModuleOptions {
   /**
@@ -46,6 +47,9 @@ export default defineNuxtModule<ApplicationInsightModuleOptions>({
        } as Partial<Snippet>
     )
 
+    nuxt.options.nitro.modules = nuxt.options.nitro.modules || []
+    nuxt.options.nitro.modules.push(await resolvePath('nitro-applicationinsights'))
+
     addTypeTemplate({
       filename: 'types/nuxt-applicationinsights.d.ts',
        getContents() {
@@ -66,8 +70,6 @@ export default defineNuxtModule<ApplicationInsightModuleOptions>({
       
       // init config
       addServerPlugin(resolver.resolve('./runtime/server/plugins/setup'))
-      // awaiting for nitro module to transform nitro-applicationinsights into a nitro module
-      addServerPlugin(resolver.resolve('./runtime/server/plugins/applicationinsights'))
     }
 
     if(options.clientEnabled) {
