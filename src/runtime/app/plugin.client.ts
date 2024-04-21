@@ -7,7 +7,6 @@ import { generateW3CId } from "@microsoft/applicationinsights-core-js"
 import { INITIAL_TRACE_KEY } from "./utils"
 // @ts-expect-error virtual file
 import { baseURL } from "#build/paths.mjs"
-import { defu } from "defu"
 
 export default defineNuxtPlugin({
     name: 'nuxt-applicationinsights:client',
@@ -15,14 +14,14 @@ export default defineNuxtPlugin({
         const runtimeConfig = useRuntimeConfig()
         const route = useRoute()
         const config: Snippet = {
-            config: {}
+            config: runtimeConfig.public.applicationinsights ?? {}
         }
 
         await nuxtApp.callHook('applicationinsights:config:client', config)
 
         // @ts-expect-error
         delete globalThis.$fetch
-        const applicationInsights = new ApplicationInsights(defu(config, toRaw(runtimeConfig.public.applicationinsights as Snippet)))
+        const applicationInsights = new ApplicationInsights(config)
 
         applicationInsights.loadAppInsights()
         applicationInsights.addDependencyListener(dep => {
