@@ -39,6 +39,7 @@
     "@microsoft/applicationinsights-web": "^3.1.0",
     "@nuxt/kit": "^3.10.2",
     "defu": "^6.1.2",
+    "mlly": "^1.6.1",
     "nitro-applicationinsights": "^0.8.0",
     "nitropack": "^2.8.1"
   },
