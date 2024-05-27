@@ -24,4 +24,5 @@ jobs:
       - run: pnpm dev:prepare
       - run: pnpm lint
       - run: pnpm prepack
+      - run: pnpm dev:prepare
       - run: pnpm test:types
