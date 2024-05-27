@@ -21,7 +21,7 @@ jobs:
           node-version: 18
           cache: pnpm
       - run: pnpm install
-      - run: pnpm prepack
       - run: pnpm dev:prepare
+      - run: pnpm prepack
       - run: pnpm lint
       - run: pnpm test:types
