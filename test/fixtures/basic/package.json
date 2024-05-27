@@ -1,5 +1,8 @@
 {
   "private": true,
   "name": "basic",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "nuxt-applicationinsights": "workspace:*"
+  }
 }
