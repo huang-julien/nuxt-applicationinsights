@@ -3,6 +3,7 @@ import { ApplicationInsights, } from "@microsoft/applicationinsights-web";
 import type { Snippet } from "@microsoft/applicationinsights-web";
 import { useRuntimeConfig } from "#imports";
 import { createFetch } from "ofetch"
+// @ts-expect-error virtual file
 import { baseURL } from "#build/paths.mjs"
 
 export default defineNuxtPlugin({
