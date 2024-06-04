@@ -1,7 +1,7 @@
 import { defineNuxtModule, createResolver, addServerPlugin, addTypeTemplate, addPlugin } from '@nuxt/kit'
 import { resolvePath } from "mlly"
 
-export interface ApplicationInsightModuleOptions {
+export interface ModuleOptions {
   /**
    * Application insights connection string
    * Can be overriden by serverConfig, clientConfig or runtimeConfig
@@ -17,10 +17,14 @@ export interface ApplicationInsightModuleOptions {
   clientEnabled: boolean
 }
 
-export default defineNuxtModule<ApplicationInsightModuleOptions>({
+export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: 'nuxt-applicationinsights',
     configKey: 'applicationinsights',
+    compatibility: {
+      nuxt: '>=3',
+      bridge: false,
+    }
   },
   // Default configuration options of the Nuxt module
   defaults: {
