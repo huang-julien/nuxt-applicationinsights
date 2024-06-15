@@ -1,5 +1,7 @@
 import { defineNuxtModule, createResolver, addServerPlugin, addTypeTemplate, addPlugin } from '@nuxt/kit'
 import { resolvePath } from "mlly"
+import { defu } from 'defu'
+import type { RuntimeConfig } from '@nuxt/schema'
 
 export interface ModuleOptions {
   /**
@@ -44,6 +46,19 @@ export default defineNuxtModule<ModuleOptions>({
       references.push({ path: './types/nuxt-applicationinsights.d.ts' })
       references.push({ path: resolver.resolve('./runtime/types.d.ts') })
     })
+
+    if (options.connectionString) {
+      nuxt.options.runtimeConfig = defu(nuxt.options.runtimeConfig, {
+        public: {
+          applicationinsights: {
+            connectionString: options.connectionString
+          }
+        },
+        applicationinsights: {
+          connectionString: options.connectionString
+        }
+      }) as RuntimeConfig
+    }
 
     if (options.serverEnabled) {
       nuxt.options.nitro.modules = nuxt.options.nitro.modules || []
