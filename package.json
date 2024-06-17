@@ -50,7 +50,7 @@
     "@types/node": "^20.0.0",
     "nuxt-applicationinsights": "link:./",
     "changelogen": "^0.5.5",
-    "eslint": "^8.50.0",
+    "eslint": "^9.0.0",
     "vitest": "^1.0.0",
     "vue-tsc": "^2.0.19"
   },
