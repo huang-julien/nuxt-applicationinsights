@@ -51,7 +51,7 @@
     "nuxt-applicationinsights": "link:./",
     "changelogen": "^0.5.5",
     "eslint": "^8.50.0",
-    "vitest": "^1.0.0",
+    "vitest": "^2.0.0",
     "vue-tsc": "^2.0.19"
   },
   "peerDependencies": {
