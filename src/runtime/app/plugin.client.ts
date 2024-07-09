@@ -18,16 +18,19 @@ export default defineNuxtPlugin({
 
         const applicationInsights = new ApplicationInsights(config)
 
-        applicationInsights.loadAppInsights()
+        try {
+            applicationInsights.loadAppInsights()
 
-        // @ts-expect-error
-        delete globalThis.$fetch
-        globalThis.$fetch = createFetch({
-            defaults: {
-                baseURL: baseURL()
-            }
-        })
-
+            // @ts-expect-error
+            delete globalThis.$fetch
+            globalThis.$fetch = createFetch({
+                defaults: {
+                    baseURL: baseURL()
+                }
+            })
+        } catch(e) {
+           nuxtApp.callHook("applicationinsights:load:error", e as Error) 
+        }
         return {
             provide: {
                 appInsights: applicationInsights
