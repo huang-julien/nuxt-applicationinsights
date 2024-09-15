@@ -44,9 +44,12 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@nuxt/eslint-config": "^0.3.0",
+    "@nuxt/eslint-config": "^0.5.0",
     "@nuxt/module-builder": "^0.8.4",
     "@nuxt/test-utils": "^3.7.4",
+    "@nuxt/kit": "^3.13.1",
+    "@nuxt/schema": "^3.13.1",
+    "nuxt": "^3.13.1",
     "@types/node": "^20.0.0",
     "nuxt-applicationinsights": "link:./",
     "changelogen": "^0.5.5",
@@ -55,10 +58,7 @@
     "vue-tsc": "^2.0.19"
   },
   "peerDependencies": {
-    "@nuxt/kit": ">=3",
-    "@nuxt/schema": ">=3",
-    "nuxt": ">=3",
     "nitropack": ">=2"
   },
-  "packageManager": "pnpm@9.2.0"
+  "packageManager": "pnpm@9.10.0"
 }
