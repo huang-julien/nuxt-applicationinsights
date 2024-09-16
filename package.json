@@ -50,15 +50,13 @@
     "@nuxt/kit": "^3.13.1",
     "@nuxt/schema": "^3.13.1",
     "nuxt": "^3.13.1",
+    "nitropack": "^2.9.7",
     "@types/node": "^20.0.0",
     "nuxt-applicationinsights": "link:./",
     "changelogen": "^0.5.5",
     "eslint": "^8.50.0",
     "vitest": "^1.0.0",
     "vue-tsc": "^2.0.19"
-  },
-  "peerDependencies": {
-    "nitropack": ">=2"
   },
   "packageManager": "pnpm@9.10.0"
 }
