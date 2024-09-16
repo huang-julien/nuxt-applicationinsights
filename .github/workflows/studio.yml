@@ -71,6 +71,7 @@ jobs:
         env:
           NUXT_PUBLIC_STUDIO_API_URL: https://api.nuxt.studio
           NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
+          NODE_OPTIONS: --max_old_space_size=4096
 
       # Deployment job
       - name: Deploy 🚀
