@@ -26,5 +26,5 @@ features:
     - title: 'Server side integration of applicationinsights'
       description: 'Client side integration with @microsoft/applicationinsights-web'
       icon: 'i-ph-browser'
-      to: 'https://www.npmjs.com/package/applicationinsights-js'
+      to: 'https://github.com/microsoft/ApplicationInsights-JS'
       target: '_blank'
