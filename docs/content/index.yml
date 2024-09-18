@@ -1,5 +1,5 @@
-title: 'Nuxt UI Pro - Docs template'
-description: Nuxt UI Pro is a collection of premium Vue components built on top of Nuxt UI to create beautiful & responsive Nuxt applications in minutes.
+title: 'nuxt-applicationinsights'
+description: nuxt-applicationinsights is a module for both server side and client side integration of Azure applicationinsights
 navigation: false
 hero:
   title: 'nuxt-applicationinsights'
@@ -11,15 +11,9 @@ hero:
       trailing: true
       to: '/getting-started'
       size: lg
-    - label: Use this template
-      icon: i-simple-icons-github
-      size: lg
-      color: gray
-      to: https://github.com/nuxt-ui-pro/docs
-      target: _blank
   code: |
     ```bash [Terminal]
-    npx nuxi init -t github:nuxt-ui-pro/docs
+    npx nuxi modules add nuxt-applicationinsights
     ```
 features:
   title: 'A ready to use module for applicationinsights'
