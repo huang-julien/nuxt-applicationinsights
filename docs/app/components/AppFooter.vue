@@ -11,13 +11,12 @@ const { footer } = useAppConfig()
     <template #right>
       <UColorModeButton v-if="footer?.colorMode" />
 
-      <template v-if="footer?.links">
-        <UButton
-          v-for="(link, index) of footer?.links"
-          :key="index"
-          v-bind="{ color: 'gray', variant: 'ghost', ...link }"
-        />
-      </template>
+      Created and maintained by <ULink
+        href="https://github.com/huang-julien"
+        target="_blank"
+      >
+        Julien Huang
+      </ULink>
     </template>
   </UFooter>
 </template>
