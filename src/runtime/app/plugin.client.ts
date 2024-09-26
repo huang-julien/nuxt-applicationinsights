@@ -23,6 +23,7 @@ export default defineNuxtPlugin({
 
             // @ts-expect-error
             delete globalThis.$fetch
+            // @ts-expect-error
             globalThis.$fetch = createFetch({
                 defaults: {
                     baseURL: baseURL()

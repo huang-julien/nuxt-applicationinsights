@@ -3,5 +3,6 @@
   "exclude": [
     "./playground",
     "./docs/**",
+    "./dist"
   ]
 }
