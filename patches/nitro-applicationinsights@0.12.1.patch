@@ -1,0 +1,148 @@
+diff --git a/dist/index.d.cts b/dist/index.d.cts
+index 95bc2fb4588716fbc46ca317b8ca9aa045c45362..562544f0945d6fcfcc398f0e994ea45e4b901e40 100644
+--- a/dist/index.d.cts
++++ b/dist/index.d.cts
+@@ -43,12 +43,19 @@ declare module 'h3' {
+       client: TelemetryClient;
+       trace: Traceparent;
+       initialTrace: string;
++      /**
++       * @deprecated use requestTelemetry.properties
++       */
+       properties: Record<string, string>;
+       /**
+        * set false to disable tracking for this request
+        */
+       shouldTrack: boolean
++      /**
++       * @deprecated use requestTelemetry.contextObject
++       */
+       tags: Record<string, string|undefined>
++      requestTelemetry: Contracts.RequestTelemetry & Contracts.Identified
+     };
+   }
+ }
+diff --git a/dist/index.d.mts b/dist/index.d.mts
+index 95bc2fb4588716fbc46ca317b8ca9aa045c45362..562544f0945d6fcfcc398f0e994ea45e4b901e40 100644
+--- a/dist/index.d.mts
++++ b/dist/index.d.mts
+@@ -43,12 +43,19 @@ declare module 'h3' {
+       client: TelemetryClient;
+       trace: Traceparent;
+       initialTrace: string;
++      /**
++       * @deprecated use requestTelemetry.properties
++       */
+       properties: Record<string, string>;
+       /**
+        * set false to disable tracking for this request
+        */
+       shouldTrack: boolean
++      /**
++       * @deprecated use requestTelemetry.contextObject
++       */
+       tags: Record<string, string|undefined>
++      requestTelemetry: Contracts.RequestTelemetry & Contracts.Identified
+     };
+   }
+ }
+diff --git a/dist/index.d.ts b/dist/index.d.ts
+index 95bc2fb4588716fbc46ca317b8ca9aa045c45362..562544f0945d6fcfcc398f0e994ea45e4b901e40 100644
+--- a/dist/index.d.ts
++++ b/dist/index.d.ts
+@@ -43,12 +43,19 @@ declare module 'h3' {
+       client: TelemetryClient;
+       trace: Traceparent;
+       initialTrace: string;
++      /**
++       * @deprecated use requestTelemetry.properties
++       */
+       properties: Record<string, string>;
+       /**
+        * set false to disable tracking for this request
+        */
+       shouldTrack: boolean
++      /**
++       * @deprecated use requestTelemetry.contextObject
++       */
+       tags: Record<string, string|undefined>
++      requestTelemetry: Contracts.RequestTelemetry & Contracts.Identified
+     };
+   }
+ }
+diff --git a/dist/runtime/plugin.mjs b/dist/runtime/plugin.mjs
+index d42edcfdabdf67113809c79b7a520b16a3ac05a1..3ba721ec8c405dd2f91e365abe8eafd6721de8b6 100644
+--- a/dist/runtime/plugin.mjs
++++ b/dist/runtime/plugin.mjs
+@@ -64,7 +64,22 @@ export default async (nitro) => {
+       trace,
+       properties: {},
+       shouldTrack: true,
+-      tags
++      tags,
++      requestTelemetry: {
++        name: `${event.method}: ${event.context.matchedRoute?.path ?? event.path}`,
++        url: event.path,
++        resultCode: 0,
++        duration: 0,
++        success: true,
++        properties: {},
++        contextObjects: {
++          [client.context.keys.operationParentId]: getRequestHeader(event, "traceparent")?.split("-")[2] ?? trace.spanId,
++          [client.context.keys.operationName]: `${event.method}: ${event.context.matchedRoute?.path ?? event.path}`,
++          [client.context.keys.operationId]: trace.traceId,
++          ...tags
++        },
++        id: trace.spanId
++      }
+     };
+   });
+   nitro.hooks.hook("beforeResponse", async (event) => {
+@@ -75,9 +90,12 @@ export default async (nitro) => {
+       if (!("shouldTrack" in ctx)) {
+         ctx.shouldTrack = true;
+       }
+-      const exceptionTelemetry = { exception: error, contextObjects: {
+-        ...ctx.event?.$appInsights.tags
+-      } };
++      const exceptionTelemetry = {
++        exception: error,
++        contextObjects: {
++          ...ctx.event?.$appInsights?.requestTelemetry?.contextObjects
++        }
++      };
+       if (ctx.event) {
+         exceptionTelemetry.contextObjects = {
+           [ctx.event.$appInsights.client.context.keys.operationParentId]: ctx.event.$appInsights.trace.traceId,
+@@ -96,25 +114,13 @@ export default async (nitro) => {
+ async function trackEvent(nitro, event) {
+   if (event.$appInsights.shouldTrack) {
+     const statusCode = getResponseStatus(event);
+-    const name = `${event.method}: ${event.context.matchedRoute?.path ?? event.path}`;
+-    const trackInfo = {
+-      name,
+-      url: event.path,
+-      resultCode: statusCode,
+-      duration: Date.now() - event.$appInsights.startTime,
+-      success: statusCode < 400,
+-      properties: event.$appInsights.properties,
+-      contextObjects: {
+-        [event.$appInsights.client.context.keys.operationParentId]: getRequestHeader(event, "traceparent")?.split("-")[2] ?? event.$appInsights.trace.spanId,
+-        [event.$appInsights.client.context.keys.operationName]: name,
+-        [event.$appInsights.client.context.keys.operationId]: event.$appInsights.trace.traceId,
+-        ...event.$appInsights.tags
+-      },
+-      id: event.$appInsights.trace.spanId
+-    };
+-    await nitro.hooks.callHook("applicationinsights:trackRequest:before", event, trackInfo);
++    event.$appInsights.requestTelemetry.resultCode = statusCode;
++    event.$appInsights.requestTelemetry.duration = Date.now() - event.$appInsights.startTime;
++    event.$appInsights.requestTelemetry.properties = { ...event.$appInsights.properties, ...event.$appInsights.requestTelemetry.properties };
++    event.$appInsights.requestTelemetry.contextObjects = { ...event.$appInsights.tags, ...event.$appInsights.requestTelemetry.contextObjects };
++    await nitro.hooks.callHook("applicationinsights:trackRequest:before", event, event.$appInsights.requestTelemetry);
+     if (event.$appInsights.shouldTrack) {
+-      event.$appInsights.client.trackRequest(trackInfo);
++      event.$appInsights.client.trackRequest(event.$appInsights.requestTelemetry);
+     }
+   }
+ }
