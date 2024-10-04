@@ -4,11 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-patchedDependencies:
-  nitro-applicationinsights@0.12.1:
-    hash: on72tmjarm6ni7w4mrqj4fncf4
-    path: patches/nitro-applicationinsights@0.12.1.patch
-
 importers:
 
   .:
@@ -26,8 +21,8 @@ importers:
         specifier: ^1.6.1
         version: 1.7.1
       nitro-applicationinsights:
-        specifier: ^0.12.1
-        version: 0.12.1(patch_hash=on72tmjarm6ni7w4mrqj4fncf4)(h3@1.12.0)(nitropack@2.9.7(magicast@0.3.5))(vitest@1.6.0(@types/node@20.16.9)(terser@5.34.0))
+        specifier: ^0.13.0
+        version: 0.13.0(h3@1.12.0)(nitropack@2.9.7(magicast@0.3.5))(vitest@1.6.0(@types/node@20.16.9)(terser@5.34.0))
     devDependencies:
       '@nuxt/devtools':
         specifier: latest
@@ -4349,14 +4344,14 @@ packages:
     resolution: {integrity: sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==}
     engines: {node: '>= 0.6'}
 
-  nitro-applicationinsights@0.12.1:
-    resolution: {integrity: sha512-NiqTboXSdoD6uP/r7t8IN/bfp5haXnFsySlIBsLPnfAusbHGU3rfvYxdH7MtFyf16dL67ps4sqnxHnFdUzXW6g==}
+  nitro-applicationinsights@0.13.0:
+    resolution: {integrity: sha512-/CLFZb3h5a9y7lfcSrd/TGE7rBgwbvk7L37hHbd6WsPBGOazgHMumfcat7x7E09DJQuSSmMFuFZWmD19KFGlug==}
     peerDependencies:
-      h3: '>=1.12.0'
+      h3: '>=1.13.0'
       nitropack: '>=2.9.7'
 
-  nitro-test-utils@0.7.0:
-    resolution: {integrity: sha512-FRZx/KabD/569b6x2KPoStDZP7wxklt50X5QRsoLrMiKmFkPDjpiMEfW8l0X5yZUIGKkcDkBq7P86SeeoJPEqA==}
+  nitro-test-utils@0.9.0:
+    resolution: {integrity: sha512-UUIhLu1wH2yhy81p5jPQBs5q3GzvG+XlnVOW683+dPqkueTEurjcy449JQRtsVQoN04KgsKWk/GPbqDk3KZDhw==}
     peerDependencies:
       nitropack: ^2
       vitest: ^2
@@ -11693,13 +11688,13 @@ snapshots:
 
   negotiator@0.6.3: {}
 
-  nitro-applicationinsights@0.12.1(patch_hash=on72tmjarm6ni7w4mrqj4fncf4)(h3@1.12.0)(nitropack@2.9.7(magicast@0.3.5))(vitest@1.6.0(@types/node@20.16.9)(terser@5.34.0)):
+  nitro-applicationinsights@0.13.0(h3@1.12.0)(nitropack@2.9.7(magicast@0.3.5))(vitest@1.6.0(@types/node@20.16.9)(terser@5.34.0)):
     dependencies:
       applicationinsights: 2.9.6
       defu: 6.1.4
       h3: 1.12.0
       mlly: 1.7.1
-      nitro-test-utils: 0.7.0(nitropack@2.9.7(magicast@0.3.5))(vitest@1.6.0(@types/node@20.16.9)(terser@5.34.0))
+      nitro-test-utils: 0.9.0(nitropack@2.9.7(magicast@0.3.5))(vitest@1.6.0(@types/node@20.16.9)(terser@5.34.0))
       nitropack: 2.9.7(magicast@0.3.5)
       pathe: 1.1.2
     transitivePeerDependencies:
@@ -11708,9 +11703,8 @@ snapshots:
       - uWebSockets.js
       - vitest
 
-  nitro-test-utils@0.7.0(nitropack@2.9.7(magicast@0.3.5))(vitest@1.6.0(@types/node@20.16.9)(terser@5.34.0)):
+  nitro-test-utils@0.9.0(nitropack@2.9.7(magicast@0.3.5))(vitest@1.6.0(@types/node@20.16.9)(terser@5.34.0)):
     dependencies:
-      defu: 6.1.4
       dotenv: 16.4.5
       listhen: 1.8.0
       nitropack: 2.9.7(magicast@0.3.5)

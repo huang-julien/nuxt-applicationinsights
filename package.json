@@ -40,7 +40,7 @@
     "@microsoft/applicationinsights-web": "^3.1.0",
     "defu": "^6.1.2",
     "mlly": "^1.6.1",
-    "nitro-applicationinsights": "^0.12.1"
+    "nitro-applicationinsights": "^0.13.0"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
@@ -58,10 +58,5 @@
     "vitest": "^1.0.0",
     "vue-tsc": "^2.0.19"
   },
-  "packageManager": "pnpm@9.11.0",
-  "pnpm": {
-    "patchedDependencies": {
-      "nitro-applicationinsights@0.12.1": "patches/nitro-applicationinsights@0.12.1.patch"
-    }
-  }
+  "packageManager": "pnpm@9.11.0"
 }
