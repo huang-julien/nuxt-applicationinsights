@@ -17,5 +17,8 @@
 
 <script setup lang="ts">
 import { useFetch } from '#imports'
+definePageMeta({
+  name: 'HOme'
+})
 const { data, refresh } = await useFetch('/api/random-number')
 </script>

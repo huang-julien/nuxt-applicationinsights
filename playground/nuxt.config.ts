@@ -7,5 +7,7 @@ export default defineNuxtConfig({
         connectionString: ''
       }
     }
-  }
+  },
+
+  compatibilityDate: '2024-09-30'
 })
