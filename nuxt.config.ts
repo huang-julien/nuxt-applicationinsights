@@ -1,9 +1,12 @@
 export default defineNuxtConfig({
-    modules: ['nuxt-applicationinsights'],
+    modules: [
+        '@nuxt/eslint',
+        'nuxt-applicationinsights'
+    ],
     imports: {
         autoImport: false,
     },
-    typescript:{
+    typescript: {
         includeWorkspace: true
     }
 })
