@@ -1,11 +1,12 @@
 import { defineNuxtPlugin } from "nuxt/app";
 import { ApplicationInsights, } from "@microsoft/applicationinsights-web";
 import type { Snippet } from "@microsoft/applicationinsights-web";
-import { useRuntimeConfig } from "#imports";
+import type { useNuxtApp } from "#imports";
+import { useRuntimeConfig  } from "#imports";
 import { createFetch } from "ofetch"
 import { baseURL } from "#build/paths.mjs"
 import { toRaw } from "vue"
-import { useNuxtApp } from "#imports"
+
 export default defineNuxtPlugin({
     name: 'nuxt-applicationinsights:client',
     async setup(nuxtApp) {
@@ -32,9 +33,9 @@ export default defineNuxtPlugin({
         try {
             applicationInsights.loadAppInsights()
 
-            // @ts-expect-error
+            // @ts-expect-error delete $fetch to re-create it with the augmented fetch by applicationinsights
             delete globalThis.$fetch
-            // @ts-expect-error
+            // @ts-expect-error re-create $fetch with the augmented fetch by applicationinsights
             globalThis.$fetch = createFetch({
                 defaults: {
                     baseURL: baseURL()

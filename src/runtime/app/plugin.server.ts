@@ -1,5 +1,4 @@
 import { defineNuxtPlugin } from "#imports"
-import { INITIAL_TRACE_KEY } from "./utils"
 import type NodeClient from 'applicationinsights/out/Library/NodeClient'
 import type Traceparent from 'applicationinsights/out/Library/Traceparent'
 

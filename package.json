@@ -38,6 +38,7 @@
   "dependencies": {
     "@microsoft/applicationinsights-core-js": "^3.1.0",
     "@microsoft/applicationinsights-web": "^3.1.0",
+    "@nuxt/eslint": "^0.5.1",
     "defu": "^6.1.2",
     "mlly": "^1.6.1",
     "nitro-applicationinsights": "^0.13.0"
@@ -51,7 +52,7 @@
     "@nuxt/test-utils": "^3.7.4",
     "@types/node": "^20.0.0",
     "changelogen": "^0.5.5",
-    "eslint": "^8.50.0",
+    "eslint": "^9.9.0",
     "nitropack": "^2.9.7",
     "nuxt": "^3.13.1",
     "nuxt-applicationinsights": "link:./",
