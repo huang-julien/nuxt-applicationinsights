@@ -1,4 +1,4 @@
-import { type NitroAppPlugin } from 'nitropack'
+import type { NitroAppPlugin } from 'nitropack'
 import { useRuntimeConfig } from '#imports'
 import { defu } from 'defu'
 import { getQuery } from "h3"

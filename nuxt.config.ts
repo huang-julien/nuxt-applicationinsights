@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-    modules: ['nuxt-applicationinsights'],
+    modules: ['nuxt-applicationinsights', '@nuxt/eslint'],
     imports: {
         autoImport: false,
     },
