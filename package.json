@@ -41,7 +41,7 @@
     "@nuxt/eslint": "^0.6.0",
     "defu": "^6.1.2",
     "mlly": "^1.6.1",
-    "nitro-applicationinsights": "^0.14.0"
+    "nitro-applicationinsights": "^0.14.1"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
