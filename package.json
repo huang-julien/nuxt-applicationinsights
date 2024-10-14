@@ -38,14 +38,14 @@
   "dependencies": {
     "@microsoft/applicationinsights-core-js": "^3.1.0",
     "@microsoft/applicationinsights-web": "^3.1.0",
-    "@nuxt/eslint": "^0.5.1",
+    "@nuxt/eslint": "^0.6.0",
     "defu": "^6.1.2",
     "mlly": "^1.6.1",
     "nitro-applicationinsights": "^0.14.0"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@nuxt/eslint-config": "^0.5.0",
+    "@nuxt/eslint-config": "^0.6.0",
     "@nuxt/kit": "^3.13.1",
     "@nuxt/module-builder": "^0.8.4",
     "@nuxt/schema": "^3.13.1",

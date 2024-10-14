@@ -21,7 +21,7 @@
     "nuxt-og-image": "^3.0.0-rc.65"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^0.5.1",
+    "@nuxt/eslint": "^0.6.0",
     "@nuxthq/studio": "^2.1.0",
     "eslint": "^9.9.0",
     "vue-tsc": "^2.0.29"
