@@ -56,7 +56,7 @@
     "nitropack": "^2.9.7",
     "nuxt": "^3.13.1",
     "nuxt-applicationinsights": "link:./",
-    "vitest": "^2.0.0",
+    "vitest": "^3.0.0",
     "vue-tsc": "^2.0.19"
   },
   "packageManager": "pnpm@9.13.2"
