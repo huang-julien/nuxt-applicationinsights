@@ -1,4 +1,3 @@
-
 export default defineNuxtConfig({
   modules: [
     'nuxt-applicationinsights',
@@ -8,5 +7,6 @@ export default defineNuxtConfig({
     applicationinsights: {
       connectionString: 'InstrumentationKey=00000000-0000-0000-0000-000000000000;'
     },
-  },
+
+  compatibilityDate: '2025-01-18',
 })

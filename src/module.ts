@@ -38,8 +38,14 @@ export default defineNuxtModule<ModuleOptions>({
     addTypeTemplate({
       filename: 'types/nuxt-applicationinsights.d.ts',
       getContents() {
-        return `/// <reference types="nitro-applicationinsights" />`
+        return `/// <reference types="nitro-applicationinsights" />\n/// <reference types="nitro-opentelemetry" />`
       }
+    })
+
+    nuxt.hook('nitro:config', (config) => {
+      config.alias ||= {}
+      config.alias['#nuxt-renderer'] = config.renderer!
+      config.renderer = resolver.resolve('./runtime/server/renderer')
     })
 
     nuxt.hook('prepare:types', ({ references }) => {
