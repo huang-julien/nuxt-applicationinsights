@@ -1,8 +1,8 @@
-import { defineEventHandler } from "h3";
+ import { getTrace } from "../utils/traces";
 
 
 export default defineTracedEventHandler(async (event) => {
     return {
-        trace: event.context.span.spanContext(),
+        trace: getTrace(),
     }
 })

@@ -67,9 +67,8 @@ export default defineNuxtModule<ModuleOptions>({
     }
 
     if (options.serverEnabled) {
-      nuxt.options.nitro.modules = nuxt.options.nitro.modules || []
+      nuxt.options.nitro.modules ||= []
       nuxt.options.nitro.modules.push(await resolvePath('nitro-applicationinsights'))
-
       addPlugin({
         src: resolver.resolve('./runtime/app/plugin.server'),
         mode: 'server',

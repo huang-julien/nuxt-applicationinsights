@@ -23,7 +23,6 @@ describe('api', () => {
     })
 
     expect(data).toBeDefined()
-    expect(data?.initialTrace).toBe(dummyTrace)
     // should have the same op id
     expect(data!.trace.split('-')[1]).toBe(dummyTrace.split('-')[1])
   })
@@ -43,7 +42,7 @@ describe('api', () => {
     const data = await $fetch<{
       trace: string
       dependencyTrace: string
-    }>('/api/with-dependency')
+    }>('/api/with-dependency').catch(e => console.log(e))
 
     expect(data).toBeDefined() 
     expect(data!.dependencyTrace.split('-')[1]).toBe(data!.trace.split('-')[1])

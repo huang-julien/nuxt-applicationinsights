@@ -1,5 +1,5 @@
-import { defineEventHandler } from "h3"
-import { context, propagation } from "@opentelemetry/api"
+ import { context, propagation } from "@opentelemetry/api"
+import { getTrace } from "../utils/traces"
  
 
 export default defineTracedEventHandler(async (event) => {
@@ -10,7 +10,7 @@ export default defineTracedEventHandler(async (event) => {
     })
 
     return {
-        trace: event.context.span.spanContext(),
+        trace: getTrace(),
         dependencyTrace: trace
     }
 })
