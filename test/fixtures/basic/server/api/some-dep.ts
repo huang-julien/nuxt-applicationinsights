@@ -1,7 +1,6 @@
- import { getTrace } from "../utils/traces";
+import { getTrace } from "../utils/traces";
 
-
-export default defineTracedEventHandler(async (event) => {
+export default defineTracedEventHandler(async () => {
     return {
         trace: getTrace(),
     }
