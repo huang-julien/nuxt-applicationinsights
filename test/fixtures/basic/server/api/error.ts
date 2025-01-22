@@ -1,6 +1,6 @@
-import { defineEventHandler, setResponseHeader } from "h3";
+ import { getTrace } from "../utils/traces";
 
-export default defineEventHandler(event => {
-    setResponseHeader(event, 'x-trace', event.$appInsights.trace.toString())
+export default defineTracedEventHandler(event => {
+    setResponseHeader(event, 'x-trace', getTrace())
     return new Error('error message')
 })

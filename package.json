@@ -39,25 +39,31 @@
     "@microsoft/applicationinsights-core-js": "^3.1.0",
     "@microsoft/applicationinsights-web": "^3.1.0",
     "@nuxt/eslint": "^0.7.0",
+    "applicationinsights": "^3.4.0",
     "defu": "^6.1.2",
-    "mlly": "^1.6.1",
-    "nitro-applicationinsights": "^0.15.0"
+    "mlly": "^1.7.4",
+    "nitro-applicationinsights": "^1.0.1"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxt/eslint-config": "^0.7.0",
-    "@nuxt/kit": "^3.13.1",
+    "@nuxt/kit": "^3.15.2",
     "@nuxt/module-builder": "^0.8.4",
-    "@nuxt/schema": "^3.13.1",
+    "@nuxt/schema": "^3.15.2",
     "@nuxt/test-utils": "^3.7.4",
     "@types/node": "^22.0.0",
     "changelogen": "^0.5.5",
     "eslint": "9.18.0",
-    "nitropack": "^2.9.7",
-    "nuxt": "^3.13.1",
+    "nitropack": "^2.10.4",
+    "nuxt": "^3.15.2",
     "nuxt-applicationinsights": "link:./",
     "vitest": "^3.0.0",
     "vue-tsc": "^2.0.19"
   },
-  "packageManager": "pnpm@9.15.4"
+  "packageManager": "pnpm@9.15.4",
+  "pnpm": {
+    "patchedDependencies": {
+      "nitropack": "patches/nitropack.patch"
+    }
+  }
 }

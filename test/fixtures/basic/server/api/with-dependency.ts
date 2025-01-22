@@ -1,13 +1,16 @@
-import { defineEventHandler } from "h3"
-import { getTraceparentHeaders} from "nitro-applicationinsights/runtime"
+import { context, propagation } from "@opentelemetry/api"
+import { getTrace } from "../utils/traces"
 
-export default defineEventHandler(async (event) => {
-    const { trace } = await $fetch<{trace: string}>('/api/some-dep', {
-        headers: getTraceparentHeaders(event)
+
+export default defineTracedEventHandler(async () => {
+    const headers = {}
+    propagation.inject(context.active(), headers)
+    const { trace } = await $fetch<{ trace: string }>('/api/some-dep', {
+        headers
     })
 
     return {
-        trace: event.$appInsights.trace.toString(),
+        trace: getTrace(),
         dependencyTrace: trace
     }
 })

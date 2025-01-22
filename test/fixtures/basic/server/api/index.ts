@@ -1,8 +1,7 @@
-import { defineEventHandler } from "h3";
+import { getTrace } from "../utils/traces";
 
-export default defineEventHandler((event) => {
+export default defineTracedEventHandler(() => {
     return {
-        trace: event.$appInsights.trace.toString(),
-        initialTrace: event.$appInsights.initialTrace,
+        trace: getTrace(),
     }
 })
