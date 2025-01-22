@@ -45,7 +45,9 @@ export default defineNuxtModule<ModuleOptions>({
     nuxt.hook('nitro:config', (config) => {
       config.alias ||= {}
       config.alias['#nuxt-renderer'] = config.renderer!
+      config.alias['#nuxt-error-renderer'] = config.errorHandler!
       config.renderer = resolver.resolve('./runtime/server/renderer')
+      config.errorHandler = resolver.resolve('./runtime/server/error-renderer')
     })
 
     nuxt.hook('prepare:types', ({ references }) => {
