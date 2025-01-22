@@ -1,0 +1,19 @@
+diff --git a/dist/core/index.mjs b/dist/core/index.mjs
+index 738002bff23c1eebfe9aeef5319bc0366f9be1a6..03ada3c37b484e14ee7f6bc1cc66541170e0e3c3 100644
+--- a/dist/core/index.mjs
++++ b/dist/core/index.mjs
+@@ -1090,13 +1090,13 @@ async function createNitro(config = {}, opts = {}) {
+   }
+   nitro.hooks.addHooks(nitro.options.hooks);
+   addNitroTasksVirtualFile(nitro);
++  await installModules(nitro);
+   if (nitro.options.imports) {
+     nitro.unimport = createUnimport(nitro.options.imports);
+     await nitro.unimport.init();
+     nitro.options.virtual["#imports"] = () => nitro.unimport?.toExports() || "";
+     nitro.options.virtual["#nitro"] = 'export * from "#imports"';
+   }
+-  await installModules(nitro);
+   return nitro;
+ }
+ 
