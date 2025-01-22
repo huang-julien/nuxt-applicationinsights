@@ -1,7 +1,7 @@
- import { getTrace } from "../utils/traces";
+import { getTrace } from "../utils/traces";
 
-export default defineTracedEventHandler((event) => {
-    return { 
+export default defineTracedEventHandler(() => {
+    return {
         trace: getTrace(),
     }
 })
