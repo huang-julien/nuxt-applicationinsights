@@ -42,12 +42,6 @@ export default defineNuxtModule<ModuleOptions>({
       }
     })
 
-    nuxt.hook('nitro:config', (config) => {
-      config.alias ||= {}
-      config.alias['#nuxt-renderer'] = config.renderer!
-      config.renderer = resolver.resolve('./runtime/server/renderer')
-    })
-
     nuxt.hook('prepare:types', ({ references }) => {
       references.push({ path: './types/nuxt-applicationinsights.d.ts' })
       references.push({ path: resolver.resolve('./runtime/types.d.ts') })
