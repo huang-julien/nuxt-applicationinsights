@@ -42,7 +42,7 @@
     "applicationinsights": "^3.4.0",
     "defu": "^6.1.2",
     "mlly": "^1.7.4",
-    "nitro-applicationinsights": "^1.0.1"
+    "nitro-applicationinsights": "^1.0.2"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
