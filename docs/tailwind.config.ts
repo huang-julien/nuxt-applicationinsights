@@ -20,8 +20,9 @@ export default <Partial<Config>>{
           800: '#016538',
           900: '#0A5331',
           950: '#052e16'
-        }
-      }
+        },
+        foreground: 'var(--color-gray-200)'
+      },
     }
   }
 }
