@@ -1,6 +1,45 @@
 # Changelog
 
 
+## v0.7.0...v1.0.0
+
+[compare changes](https://github.com/huang-julien/nuxt-applicationinsights/compare/v0.7.0...chore/1.0.0)
+
+### 🚀 Enhancements
+
+- Update nitro-applicationinsights to v1 ([#116](https://github.com/huang-julien/nuxt-applicationinsights/pull/116))
+
+### 🩹 Fixes
+
+- **deps:** Update all non-major dependencies ([#105](https://github.com/huang-julien/nuxt-applicationinsights/pull/105))
+- **deps:** Update dependency nuxt-og-image to v4 ([#112](https://github.com/huang-julien/nuxt-applicationinsights/pull/112))
+- **deps:** Update all non-major dependencies ([#109](https://github.com/huang-julien/nuxt-applicationinsights/pull/109))
+- **deps:** Update all non-major dependencies ([#117](https://github.com/huang-julien/nuxt-applicationinsights/pull/117))
+- **deps:** Update dependency @nuxt/content to v3 ([#114](https://github.com/huang-julien/nuxt-applicationinsights/pull/114))
+- **deps:** Update all non-major dependencies ([#120](https://github.com/huang-julien/nuxt-applicationinsights/pull/120))
+
+### 📖 Documentation
+
+- Add foreground ([3bdc884](https://github.com/huang-julien/nuxt-applicationinsights/commit/3bdc884))
+- Add ui pro variables ([5f2679b](https://github.com/huang-julien/nuxt-applicationinsights/commit/5f2679b))
+- Fix tailwind config ([1410ef4](https://github.com/huang-julien/nuxt-applicationinsights/commit/1410ef4))
+- Update doc for V1 ([9bd25fe](https://github.com/huang-julien/nuxt-applicationinsights/commit/9bd25fe))
+
+### 🏡 Chore
+
+- **github:** Add issue templates ([#111](https://github.com/huang-julien/nuxt-applicationinsights/pull/111))
+- Regen lockfile ([2d892f3](https://github.com/huang-julien/nuxt-applicationinsights/commit/2d892f3))
+- Update nitro-applicationinisights ([b089deb](https://github.com/huang-julien/nuxt-applicationinsights/commit/b089deb))
+- Update docs packages ([2d69f7b](https://github.com/huang-julien/nuxt-applicationinsights/commit/2d69f7b))
+
+### 🤖 CI
+
+- **studio:** Set pnpm version to 9 ([271f3c9](https://github.com/huang-julien/nuxt-applicationinsights/commit/271f3c9))
+
+### ❤️ Contributors
+
+- Julien Huang ([@huang-julien](http://github.com/huang-julien))
+
 ## v0.6.1...chore/0.7.0
 
 [compare changes](https://github.com/huang-julien/nuxt-applicationinsights/compare/v0.6.1...chore/0.7.0)
