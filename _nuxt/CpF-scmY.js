@@ -1,0 +1,1 @@
+import{k as r,o as s,l as a,r as o}from"./ChgrcvJh.js";const t={};function n(e,c){return s(),a("thead",null,[o(e.$slots,"default")])}const _=Object.assign(r(t,[["render",n]]),{__name:"ProseThead"});export{_ as default};
