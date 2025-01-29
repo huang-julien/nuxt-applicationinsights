@@ -1,0 +1,1 @@
+import{k as r,o as s,l as o,r as n}from"./ClMlxg_a.js";const t={};function a(e,c){return s(),o("em",null,[n(e.$slots,"default")])}const _=Object.assign(r(t,[["render",a]]),{__name:"ProseEm"});export{_ as default};
