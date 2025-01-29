@@ -1,1 +1,0 @@
-import{k as r,o as s,l as o,r as n}from"./ChgrcvJh.js";const t={};function a(e,c){return s(),o("p",null,[n(e.$slots,"default")])}const _=Object.assign(r(t,[["render",a]]),{__name:"ProseP"});export{_ as default};

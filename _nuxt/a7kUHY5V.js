@@ -1,0 +1,1 @@
+import{k as o,o as r,l as s,r as n}from"./BIXSGFUh.js";const t={};function l(e,a){return r(),s("ol",null,[n(e.$slots,"default")])}const _=Object.assign(o(t,[["render",l]]),{__name:"ProseOl"});export{_ as default};

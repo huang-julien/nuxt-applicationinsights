@@ -1,1 +1,0 @@
-import{k as n,o,l as r,r as s}from"./ChgrcvJh.js";const t={};function c(e,a){return o(),r("code",null,[s(e.$slots,"default")])}const _=Object.assign(n(t,[["render",c]]),{__name:"ProseCodeInline"});export{_ as default};
