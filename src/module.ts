@@ -2,8 +2,26 @@ import { defineNuxtModule, createResolver, addServerPlugin, addPlugin } from '@n
 import { resolvePath } from "mlly"
 import { defu } from 'defu'
 import type { RuntimeConfig } from '@nuxt/schema'
+import type { Snippet } from "@microsoft/applicationinsights-web";
+import type { TNitroAppInsightsConfig } from "nitro-applicationinsights";
+declare module '@nuxt/schema' {
+    interface RuntimeConfig {
+        applicationinsights: Partial<TNitroAppInsightsConfig>
+    }
 
-import './runtime/types.d'
+    interface PublicRuntimeConfig {
+        applicationinsights: Partial<Snippet['config']>
+    }
+
+}
+
+declare module '#app/nuxt' {
+    interface RuntimeNuxtHooks {
+        'applicationinsights:config:client': (config: Snippet) => void
+        'applicationinsights:load:error': (error: Error) => void
+    }
+}
+
 export interface ModuleOptions {
   /**
    * Application insights connection string
