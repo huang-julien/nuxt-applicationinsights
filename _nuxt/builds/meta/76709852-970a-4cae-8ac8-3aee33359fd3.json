@@ -1,0 +1,1 @@
+{"id":"76709852-970a-4cae-8ac8-3aee33359fd3","timestamp":1738794954339,"matcher":{"static":{"/":{"prerender":true},"/api/search.json":{"prerender":true}},"wildcard":{},"dynamic":{}},"prerendered":["/getting-started","/getting-started/installation","/getting-started/configuration","/getting-started/how-does-it-work","/getting-started/hooks"]}
