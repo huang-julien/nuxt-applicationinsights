@@ -38,7 +38,7 @@
   "dependencies": {
     "@microsoft/applicationinsights-core-js": "^3.1.0",
     "@microsoft/applicationinsights-web": "^3.1.0",
-    "@nuxt/eslint": "^0.7.0",
+    "@nuxt/eslint": "^1.0.0",
     "applicationinsights": "^3.4.0",
     "defu": "^6.1.2",
     "mlly": "^1.7.4",
