@@ -1,7 +1,26 @@
-import { defineNuxtModule, createResolver, addServerPlugin, addTypeTemplate, addPlugin } from '@nuxt/kit'
+import { defineNuxtModule, createResolver, addServerPlugin, addPlugin } from '@nuxt/kit'
 import { resolvePath } from "mlly"
 import { defu } from 'defu'
 import type { RuntimeConfig } from '@nuxt/schema'
+import type { Snippet } from "@microsoft/applicationinsights-web";
+import type { TNitroAppInsightsConfig } from "nitro-applicationinsights";
+declare module '@nuxt/schema' {
+    interface RuntimeConfig {
+        applicationinsights: Partial<TNitroAppInsightsConfig>
+    }
+
+    interface PublicRuntimeConfig {
+        applicationinsights: Partial<Snippet['config']>
+    }
+
+}
+
+declare module '#app/nuxt' {
+    interface RuntimeNuxtHooks {
+        'applicationinsights:config:client': (config: Snippet) => void
+        'applicationinsights:load:error': (error: Error) => void
+    }
+}
 
 export interface ModuleOptions {
   /**
@@ -35,17 +54,6 @@ export default defineNuxtModule<ModuleOptions>({
   },
   async setup(options, nuxt) {
     const resolver = createResolver(import.meta.url)
-    addTypeTemplate({
-      filename: 'types/nuxt-applicationinsights.d.ts',
-      getContents() {
-        return `/// <reference types="nitro-applicationinsights" />\n/// <reference types="nitro-opentelemetry" />`
-      }
-    })
-
-    nuxt.hook('prepare:types', ({ references }) => {
-      references.push({ path: './types/nuxt-applicationinsights.d.ts' })
-      references.push({ path: resolver.resolve('./runtime/types.d.ts') })
-    })
 
     if (options.connectionString) {
       nuxt.options.runtimeConfig = defu(nuxt.options.runtimeConfig, {
