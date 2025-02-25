@@ -1,6 +1,27 @@
 # Changelog
 
 
+## v1.0.1
+
+[compare changes](https://github.com/huang-julien/nuxt-applicationinsights/compare/v1.0.0...v1.0.1)
+
+### 🩹 Fixes
+
+- **deps:** Update all non-major dependencies ([#125](https://github.com/huang-julien/nuxt-applicationinsights/pull/125))
+- **deps:** Update all non-major dependencies ([#130](https://github.com/huang-julien/nuxt-applicationinsights/pull/130))
+- Augment module entry instead of runtime .nuxt ([#128](https://github.com/huang-julien/nuxt-applicationinsights/pull/128))
+- **deps:** Update dependency @nuxt/eslint to v1 ([#124](https://github.com/huang-julien/nuxt-applicationinsights/pull/124))
+- **deps:** Update all non-major dependencies ([#131](https://github.com/huang-julien/nuxt-applicationinsights/pull/131))
+
+### 🤖 CI
+
+- Remove corepack ([d54fd02](https://github.com/huang-julien/nuxt-applicationinsights/commit/d54fd02))
+- Fix pnpm version ([c7f2eaa](https://github.com/huang-julien/nuxt-applicationinsights/commit/c7f2eaa))
+
+### ❤️ Contributors
+
+- Julien Huang ([@huang-julien](http://github.com/huang-julien))
+
 ## v0.7.0...v1.0.0
 
 [compare changes](https://github.com/huang-julien/nuxt-applicationinsights/compare/v0.7.0...chore/1.0.0)
