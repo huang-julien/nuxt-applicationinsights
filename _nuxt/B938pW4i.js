@@ -1,1 +1,0 @@
-import{k as o,o as t,l as r,r as s}from"./CV57H-o1.js";const c={};function n(e,l){return t(),r("blockquote",null,[s(e.$slots,"default")])}const _=Object.assign(o(c,[["render",n]]),{__name:"ProseBlockquote"});export{_ as default};
