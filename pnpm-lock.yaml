@@ -6,7 +6,7 @@ settings:
 
 patchedDependencies:
   nitropack:
-    hash: mqpba3nlwme6udysq2ehmn5qja
+    hash: 2ca685b814cae3c687e67e27b7166887e8bcc4d7163c8024f7e98a0c4f51c7ae
     path: patches/nitropack.patch
 
 importers:
@@ -33,7 +33,7 @@ importers:
         version: 1.7.4
       nitro-applicationinsights:
         specifier: ^1.0.2
-        version: 1.0.4(@baselime/node-opentelemetry@0.5.8(@trpc/server@10.45.2))(@microlabs/otel-cf-workers@1.0.0-rc.49(@opentelemetry/api@1.9.0))(@opentelemetry/api@1.9.0)(h3@1.15.1)(nitropack@2.10.4(patch_hash=mqpba3nlwme6udysq2ehmn5qja)(@azure/identity@4.6.0)(@libsql/client@0.14.0)(better-sqlite3@11.8.1)(typescript@5.7.3))(vitest@3.0.7(@types/debug@4.1.12)(@types/node@22.13.5)(jiti@2.4.2)(terser@5.37.0)(yaml@2.7.0))
+        version: 1.0.4(@baselime/node-opentelemetry@0.5.8(@trpc/server@10.45.2))(@microlabs/otel-cf-workers@1.0.0-rc.49(@opentelemetry/api@1.9.0))(@opentelemetry/api@1.9.0)(h3@1.15.1)(nitropack@2.10.4(patch_hash=2ca685b814cae3c687e67e27b7166887e8bcc4d7163c8024f7e98a0c4f51c7ae)(@azure/identity@4.6.0)(@libsql/client@0.14.0)(better-sqlite3@11.8.1)(typescript@5.7.3))(vitest@3.0.7(@types/debug@4.1.12)(@types/node@22.13.5)(jiti@2.4.2)(terser@5.37.0)(yaml@2.7.0))
     devDependencies:
       '@nuxt/devtools':
         specifier: latest
@@ -64,7 +64,7 @@ importers:
         version: 9.19.0(jiti@2.4.2)
       nitropack:
         specifier: ^2.10.4
-        version: 2.10.4(patch_hash=mqpba3nlwme6udysq2ehmn5qja)(@azure/identity@4.6.0)(@libsql/client@0.14.0)(better-sqlite3@11.8.1)(typescript@5.7.3)
+        version: 2.10.4(patch_hash=2ca685b814cae3c687e67e27b7166887e8bcc4d7163c8024f7e98a0c4f51c7ae)(@azure/identity@4.6.0)(@libsql/client@0.14.0)(better-sqlite3@11.8.1)(typescript@5.7.3)
       nuxt:
         specifier: ^3.15.2
         version: 3.15.4(@azure/identity@4.6.0)(@libsql/client@0.14.0)(@parcel/watcher@2.5.1)(@types/node@22.13.5)(better-sqlite3@11.8.1)(db0@0.2.3(@libsql/client@0.14.0)(better-sqlite3@11.8.1))(eslint@9.19.0(jiti@2.4.2))(ioredis@5.4.2)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.32.1)(terser@5.37.0)(typescript@5.7.3)(vite@6.1.1(@types/node@22.13.5)(jiti@2.4.2)(terser@5.37.0)(yaml@2.7.0))(vue-tsc@2.2.4(typescript@5.7.3))(yaml@2.7.0)
@@ -15795,7 +15795,7 @@ snapshots:
 
   negotiator@0.6.3: {}
 
-  nitro-applicationinsights@1.0.4(@baselime/node-opentelemetry@0.5.8(@trpc/server@10.45.2))(@microlabs/otel-cf-workers@1.0.0-rc.49(@opentelemetry/api@1.9.0))(@opentelemetry/api@1.9.0)(h3@1.15.1)(nitropack@2.10.4(patch_hash=mqpba3nlwme6udysq2ehmn5qja)(@azure/identity@4.6.0)(@libsql/client@0.14.0)(better-sqlite3@11.8.1)(typescript@5.7.3))(vitest@3.0.7(@types/debug@4.1.12)(@types/node@22.13.5)(jiti@2.4.2)(terser@5.37.0)(yaml@2.7.0)):
+  nitro-applicationinsights@1.0.4(@baselime/node-opentelemetry@0.5.8(@trpc/server@10.45.2))(@microlabs/otel-cf-workers@1.0.0-rc.49(@opentelemetry/api@1.9.0))(@opentelemetry/api@1.9.0)(h3@1.15.1)(nitropack@2.10.4(patch_hash=2ca685b814cae3c687e67e27b7166887e8bcc4d7163c8024f7e98a0c4f51c7ae)(@azure/identity@4.6.0)(@libsql/client@0.14.0)(better-sqlite3@11.8.1)(typescript@5.7.3))(vitest@3.0.7(@types/debug@4.1.12)(@types/node@22.13.5)(jiti@2.4.2)(terser@5.37.0)(yaml@2.7.0)):
     dependencies:
       '@opentelemetry/instrumentation': 0.57.2(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation-http': 0.57.2(@opentelemetry/api@1.9.0)
@@ -15806,8 +15806,8 @@ snapshots:
       magic-string: 0.30.17
       mlly: 1.7.4
       nitro-opentelemetry: 0.7.4(@baselime/node-opentelemetry@0.5.8(@trpc/server@10.45.2))(@microlabs/otel-cf-workers@1.0.0-rc.49(@opentelemetry/api@1.9.0))
-      nitro-test-utils: 0.9.1(nitropack@2.10.4(patch_hash=mqpba3nlwme6udysq2ehmn5qja)(@azure/identity@4.6.0)(@libsql/client@0.14.0)(better-sqlite3@11.8.1)(typescript@5.7.3))(vitest@3.0.7(@types/debug@4.1.12)(@types/node@22.13.5)(jiti@2.4.2)(terser@5.37.0)(yaml@2.7.0))
-      nitropack: 2.10.4(patch_hash=mqpba3nlwme6udysq2ehmn5qja)(@azure/identity@4.6.0)(@libsql/client@0.14.0)(better-sqlite3@11.8.1)(typescript@5.7.3)
+      nitro-test-utils: 0.9.1(nitropack@2.10.4(patch_hash=2ca685b814cae3c687e67e27b7166887e8bcc4d7163c8024f7e98a0c4f51c7ae)(@azure/identity@4.6.0)(@libsql/client@0.14.0)(better-sqlite3@11.8.1)(typescript@5.7.3))(vitest@3.0.7(@types/debug@4.1.12)(@types/node@22.13.5)(jiti@2.4.2)(terser@5.37.0)(yaml@2.7.0))
+      nitropack: 2.10.4(patch_hash=2ca685b814cae3c687e67e27b7166887e8bcc4d7163c8024f7e98a0c4f51c7ae)(@azure/identity@4.6.0)(@libsql/client@0.14.0)(better-sqlite3@11.8.1)(typescript@5.7.3)
       pathe: 2.0.3
     transitivePeerDependencies:
       - '@baselime/node-opentelemetry'
@@ -15842,17 +15842,17 @@ snapshots:
       - encoding
       - supports-color
 
-  nitro-test-utils@0.9.1(nitropack@2.10.4(patch_hash=mqpba3nlwme6udysq2ehmn5qja)(@azure/identity@4.6.0)(@libsql/client@0.14.0)(better-sqlite3@11.8.1)(typescript@5.7.3))(vitest@3.0.7(@types/debug@4.1.12)(@types/node@22.13.5)(jiti@2.4.2)(terser@5.37.0)(yaml@2.7.0)):
+  nitro-test-utils@0.9.1(nitropack@2.10.4(patch_hash=2ca685b814cae3c687e67e27b7166887e8bcc4d7163c8024f7e98a0c4f51c7ae)(@azure/identity@4.6.0)(@libsql/client@0.14.0)(better-sqlite3@11.8.1)(typescript@5.7.3))(vitest@3.0.7(@types/debug@4.1.12)(@types/node@22.13.5)(jiti@2.4.2)(terser@5.37.0)(yaml@2.7.0)):
     dependencies:
       dotenv: 16.4.7
       listhen: 1.9.0
-      nitropack: 2.10.4(patch_hash=mqpba3nlwme6udysq2ehmn5qja)(@azure/identity@4.6.0)(@libsql/client@0.14.0)(better-sqlite3@11.8.1)(typescript@5.7.3)
+      nitropack: 2.10.4(patch_hash=2ca685b814cae3c687e67e27b7166887e8bcc4d7163c8024f7e98a0c4f51c7ae)(@azure/identity@4.6.0)(@libsql/client@0.14.0)(better-sqlite3@11.8.1)(typescript@5.7.3)
       ofetch: 1.4.1
       pathe: 2.0.3
       ufo: 1.5.4
       vitest: 3.0.7(@types/debug@4.1.12)(@types/node@22.13.5)(jiti@2.4.2)(terser@5.37.0)(yaml@2.7.0)
 
-  nitropack@2.10.4(patch_hash=mqpba3nlwme6udysq2ehmn5qja)(@azure/identity@4.6.0)(@libsql/client@0.14.0)(better-sqlite3@11.8.1)(typescript@5.7.3):
+  nitropack@2.10.4(patch_hash=2ca685b814cae3c687e67e27b7166887e8bcc4d7163c8024f7e98a0c4f51c7ae)(@azure/identity@4.6.0)(@libsql/client@0.14.0)(better-sqlite3@11.8.1)(typescript@5.7.3):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.3.4
       '@netlify/functions': 2.8.2
@@ -16150,7 +16150,7 @@ snapshots:
       magic-string: 0.30.17
       mlly: 1.7.4
       nanotar: 0.2.0
-      nitropack: 2.10.4(patch_hash=mqpba3nlwme6udysq2ehmn5qja)(@azure/identity@4.6.0)(@libsql/client@0.14.0)(better-sqlite3@11.8.1)(typescript@5.7.3)
+      nitropack: 2.10.4(patch_hash=2ca685b814cae3c687e67e27b7166887e8bcc4d7163c8024f7e98a0c4f51c7ae)(@azure/identity@4.6.0)(@libsql/client@0.14.0)(better-sqlite3@11.8.1)(typescript@5.7.3)
       nypm: 0.5.2
       ofetch: 1.4.1
       ohash: 1.1.4
@@ -16272,7 +16272,7 @@ snapshots:
       magic-string: 0.30.17
       mlly: 1.7.4
       nanotar: 0.2.0
-      nitropack: 2.10.4(patch_hash=mqpba3nlwme6udysq2ehmn5qja)(@azure/identity@4.6.0)(@libsql/client@0.14.0)(better-sqlite3@11.8.1)(typescript@5.7.3)
+      nitropack: 2.10.4(patch_hash=2ca685b814cae3c687e67e27b7166887e8bcc4d7163c8024f7e98a0c4f51c7ae)(@azure/identity@4.6.0)(@libsql/client@0.14.0)(better-sqlite3@11.8.1)(typescript@5.7.3)
       nypm: 0.5.2
       ofetch: 1.4.1
       ohash: 1.1.4
@@ -16394,7 +16394,7 @@ snapshots:
       magic-string: 0.30.17
       mlly: 1.7.4
       nanotar: 0.2.0
-      nitropack: 2.10.4(patch_hash=mqpba3nlwme6udysq2ehmn5qja)(@azure/identity@4.6.0)(@libsql/client@0.14.0)(better-sqlite3@11.8.1)(typescript@5.7.3)
+      nitropack: 2.10.4(patch_hash=2ca685b814cae3c687e67e27b7166887e8bcc4d7163c8024f7e98a0c4f51c7ae)(@azure/identity@4.6.0)(@libsql/client@0.14.0)(better-sqlite3@11.8.1)(typescript@5.7.3)
       nypm: 0.5.2
       ofetch: 1.4.1
       ohash: 1.1.4
