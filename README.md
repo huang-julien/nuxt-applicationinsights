@@ -1,6 +1,6 @@
 # nuxt-applicationinsights
 
-[Microsoft Application Insight](https://learn.microsoft.com/fr-fr/azure/azure-monitor/app/app-insights-overview?tabs=net) integration for Nuxt 3.
+[Microsoft Application Insight](https://learn.microsoft.com/fr-fr/azure/azure-monitor/app/app-insights-overview?tabs=net) integration for Nuxt.
 
 <!-- - [🏀 Online playground](https://stackblitz.com/github/your-org/my-module?file=playground%2Fapp.vue) -->
 <!-- - [📖 &nbsp;Documentation](https://example.com) -->
