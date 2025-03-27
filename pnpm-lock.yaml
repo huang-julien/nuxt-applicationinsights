@@ -102,8 +102,8 @@ importers:
         specifier: ^3.13.2
         version: 3.16.1(@azure/identity@4.8.0)(@libsql/client@0.14.0)(@parcel/watcher@2.5.1)(@types/node@22.13.14)(better-sqlite3@11.9.1)(db0@0.3.1(@libsql/client@0.14.0)(better-sqlite3@11.9.1))(eslint@9.23.0(jiti@2.4.2))(ioredis@5.6.0)(lightningcss@1.29.2)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.37.0)(terser@5.39.0)(typescript@5.7.3)(vite@6.2.3(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(yaml@2.7.0))(vue-tsc@2.2.8(typescript@5.7.3))(yaml@2.7.0)
       nuxt-og-image:
-        specifier: ^4.0.0
-        version: 4.2.0(@unhead/vue@2.0.2(vue@3.5.13(typescript@5.7.3)))(magicast@0.3.5)(unstorage@1.15.0(@azure/identity@4.8.0)(db0@0.3.1(@libsql/client@0.14.0)(better-sqlite3@11.9.1))(ioredis@5.6.0))(vite@6.2.3(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.3))
+        specifier: ^5.0.0
+        version: 5.1.1(@unhead/vue@2.0.2(vue@3.5.13(typescript@5.7.3)))(magicast@0.3.5)(unstorage@1.15.0(@azure/identity@4.8.0)(db0@0.3.1(@libsql/client@0.14.0)(better-sqlite3@11.9.1))(ioredis@5.6.0))(vite@6.2.3(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.3))
     devDependencies:
       '@nuxt/eslint':
         specifier: ^1.0.0
@@ -122,7 +122,7 @@ importers:
     devDependencies:
       nuxt:
         specifier: latest
-        version: 3.16.1(@azure/identity@4.8.0)(@libsql/client@0.14.0)(@parcel/watcher@2.5.1)(@types/node@22.13.14)(better-sqlite3@11.9.1)(db0@0.3.1(@libsql/client@0.14.0)(better-sqlite3@11.9.1))(eslint@9.23.0(jiti@2.4.2))(ioredis@5.6.0)(lightningcss@1.29.2)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.37.0)(terser@5.39.0)(typescript@5.7.3)(vite@6.2.3(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(yaml@2.7.0))(vue-tsc@2.2.8(typescript@5.7.3))(yaml@2.7.0)
+        version: 3.16.1(@azure/identity@4.8.0)(@libsql/client@0.14.0)(@parcel/watcher@2.5.1)(@types/node@22.13.14)(better-sqlite3@11.9.1)(db0@0.3.1(@libsql/client@0.14.0)(better-sqlite3@11.9.1))(eslint@9.19.0(jiti@2.4.2))(ioredis@5.6.0)(lightningcss@1.29.2)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.37.0)(terser@5.39.0)(typescript@5.7.3)(vite@6.2.3(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(yaml@2.7.0))(vue-tsc@2.2.8(typescript@5.7.3))(yaml@2.7.0)
 
 packages:
 
@@ -1204,11 +1204,6 @@ packages:
     resolution: {integrity: sha512-+NgZ2uP5BuneqvQbe7EdOEaFEDy8762c99pLABtn7/Ur0ExEsQJMP7pYjjoTfKubhBqecr5Vo9yHkPBj1eHulQ==}
     peerDependencies:
       vite: '*'
-
-  '@nuxt/devtools-kit@2.1.3':
-    resolution: {integrity: sha512-OlLo8LZTp71Wi9q0ooE1bYeS5P7P1sU3JUb+zqJRX6/jMQa2QP06hc6TOz/5AIsEOq8YPQTum4oJ9gpHx53B0g==}
-    peerDependencies:
-      vite: '>=6.0'
 
   '@nuxt/devtools-kit@2.3.2':
     resolution: {integrity: sha512-K0citnz9bSecPCLl4jGfE5I5St+E9XtDmOvYqq3ranGZGZ2Mvs5RwgUkaOrn4rulvUmBGBl7Exwh5YX9PONrEQ==}
@@ -3112,15 +3107,6 @@ packages:
 
   '@ungap/structured-clone@1.3.0':
     resolution: {integrity: sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==}
-
-  '@unhead/schema@1.11.20':
-    resolution: {integrity: sha512-0zWykKAaJdm+/Y7yi/Yds20PrUK7XabLe9c3IRcjnwYmSWY6z0Cr19VIs3ozCj8P+GhR+/TI2mwtGlueCEYouA==}
-
-  '@unhead/shared@1.11.20':
-    resolution: {integrity: sha512-1MOrBkGgkUXS+sOKz/DBh4U20DNoITlJwpmvSInxEUNhghSNb56S0RnaHRq0iHkhrO/cDgz2zvfdlRpoPLGI3w==}
-
-  '@unhead/ssr@1.11.20':
-    resolution: {integrity: sha512-j6ehzmdWGAvv0TEZyLE3WBnG1ULnsbKQcLqBDh3fvKS6b3xutcVZB7mjvrVE7ckSZt6WwOtG0ED3NJDS7IjzBA==}
 
   '@unhead/vue@2.0.2':
     resolution: {integrity: sha512-pUGcbmPNCALOVWnQRtIjJ5ubNaZus3nHfCBDPEVwhbiLzeLF6wbhgTakwksZ1EegKNOZwRAkmVbV6i+23OYEUQ==}
@@ -5842,11 +5828,11 @@ packages:
     resolution: {integrity: sha512-Zmuw/PxAeJkIu7EPZEFg0lIwnfpeiDsHog9i1g5d4Z3O5+00R1Vbuk+NC6K7kgpdLsdU2/XBvzc7oQ6BsXuQPg==}
     hasBin: true
 
-  nuxt-og-image@4.2.0:
-    resolution: {integrity: sha512-cwvzefOsF5woIuNit72/8fP5ha4iGr6bTkSvtglH5RYB/WHbXrPSFOiMai015s8UJeW8LCguWo/+RyRFlG4Pig==}
+  nuxt-og-image@5.1.1:
+    resolution: {integrity: sha512-QMtkShOmQ4L9QIg6C0zcUOjjkqU19GKGQvkwP9aF0ZrivNtW7cjRSKLy/HtzFTI3rcbP6H5Vkhu6u2hEtNSb3A==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
-      '@unhead/vue': ^1.0.0 || ^2.0.0
+      '@unhead/vue': ^2.0.0-rc.1
       unstorage: ^1.0.0
 
   nuxt-site-config-kit@3.1.7:
@@ -5951,9 +5937,6 @@ packages:
 
   package-manager-detector@1.1.0:
     resolution: {integrity: sha512-Y8f9qUlBzW8qauJjd/eu6jlpJZsuPJm2ZAV0cDVd420o4EdpH5RPdoCv+60/TdJflGatr4sDfpAL6ArWZbM5tA==}
-
-  packrup@0.1.2:
-    resolution: {integrity: sha512-ZcKU7zrr5GlonoS9cxxrb5HVswGnyj6jQvwFBa6p5VFw7G71VAHcUKL5wyZSU/ECtPM/9gacWxy2KFQKt1gMNA==}
 
   pako@0.2.9:
     resolution: {integrity: sha512-NUcwaKxUxWrZLpDG+z/xZaCgQITkA/Dv4V/T6bw7VON6l1Xz/VnrBqrYjZQ12TamKHzITTfOEIYUj48y2KXImA==}
@@ -7654,9 +7637,6 @@ packages:
     resolution: {integrity: sha512-y1aNsEeoLXnWb6pI9TvfNPIxySyo4Un3OGxKn7rsNj8+tgSquzXEWkzfA5y6gU0fvzmQgvx3JBn/p51qQ8Xg9A==}
     engines: {node: '>=18'}
 
-  zhead@2.2.4:
-    resolution: {integrity: sha512-8F0OI5dpWIA5IGG5NHUg9staDwz/ZPxZtvGVf01j7vHqSyZ0raHY+78atOVxRqb73AotX22uV1pXt3gYSstGag==}
-
   zip-stream@6.0.1:
     resolution: {integrity: sha512-zK7YHHz4ZXpW89AHXUPbQVGKI7uvkd3hzusTdotCg1UxyaVtg0zFJSTfW/Dq5f7OBBVnq6cZIaC8Ti4hb6dtCA==}
     engines: {node: '>= 14'}
@@ -8998,15 +8978,6 @@ snapshots:
       '@nuxt/kit': 3.16.1(magicast@0.3.5)
       '@nuxt/schema': 3.16.1
       execa: 7.2.0
-      vite: 6.2.3(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(yaml@2.7.0)
-    transitivePeerDependencies:
-      - magicast
-
-  '@nuxt/devtools-kit@2.1.3(magicast@0.3.5)(vite@6.2.3(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(yaml@2.7.0))':
-    dependencies:
-      '@nuxt/kit': 3.16.1(magicast@0.3.5)
-      '@nuxt/schema': 3.16.1
-      execa: 9.5.2
       vite: 6.2.3(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(yaml@2.7.0)
     transitivePeerDependencies:
       - magicast
@@ -11952,21 +11923,6 @@ snapshots:
       eslint-visitor-keys: 4.2.0
 
   '@ungap/structured-clone@1.3.0': {}
-
-  '@unhead/schema@1.11.20':
-    dependencies:
-      hookable: 5.5.3
-      zhead: 2.2.4
-
-  '@unhead/shared@1.11.20':
-    dependencies:
-      '@unhead/schema': 1.11.20
-      packrup: 0.1.2
-
-  '@unhead/ssr@1.11.20':
-    dependencies:
-      '@unhead/schema': 1.11.20
-      '@unhead/shared': 1.11.20
 
   '@unhead/vue@2.0.2(vue@3.5.13(typescript@5.7.3))':
     dependencies:
@@ -15429,13 +15385,12 @@ snapshots:
     transitivePeerDependencies:
       - magicast
 
-  nuxt-og-image@4.2.0(@unhead/vue@2.0.2(vue@3.5.13(typescript@5.7.3)))(magicast@0.3.5)(unstorage@1.15.0(@azure/identity@4.8.0)(db0@0.3.1(@libsql/client@0.14.0)(better-sqlite3@11.9.1))(ioredis@5.6.0))(vite@6.2.3(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.3)):
+  nuxt-og-image@5.1.1(@unhead/vue@2.0.2(vue@3.5.13(typescript@5.7.3)))(magicast@0.3.5)(unstorage@1.15.0(@azure/identity@4.8.0)(db0@0.3.1(@libsql/client@0.14.0)(better-sqlite3@11.9.1))(ioredis@5.6.0))(vite@6.2.3(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.3)):
     dependencies:
-      '@nuxt/devtools-kit': 2.1.3(magicast@0.3.5)(vite@6.2.3(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(yaml@2.7.0))
+      '@nuxt/devtools-kit': 2.3.2(magicast@0.3.5)(vite@6.2.3(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(yaml@2.7.0))
       '@nuxt/kit': 3.16.1(magicast@0.3.5)
       '@resvg/resvg-js': 2.6.2
       '@resvg/resvg-wasm': 2.6.2
-      '@unhead/ssr': 1.11.20
       '@unhead/vue': 2.0.2(vue@3.5.13(typescript@5.7.3))
       '@unocss/core': 66.0.0
       '@unocss/preset-wind3': 66.0.0
@@ -15445,6 +15400,7 @@ snapshots:
       execa: 9.5.2
       image-size: 2.0.1
       magic-string: 0.30.17
+      mocked-exports: 0.1.1
       nuxt-site-config: 3.1.7(magicast@0.3.5)(vue@3.5.13(typescript@5.7.3))
       nypm: 0.6.0
       ofetch: 1.4.1
@@ -15847,8 +15803,6 @@ snapshots:
       quansync: 0.2.10
 
   package-manager-detector@1.1.0: {}
-
-  packrup@0.1.2: {}
 
   pako@0.2.9: {}
 
@@ -17725,8 +17679,6 @@ snapshots:
       '@speed-highlight/core': 1.2.7
       cookie: 1.0.2
       youch-core: 0.3.2
-
-  zhead@2.2.4: {}
 
   zip-stream@6.0.1:
     dependencies:
