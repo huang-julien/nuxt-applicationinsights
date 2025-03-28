@@ -14,7 +14,7 @@
     "@iconify-json/heroicons": "^1.1.24",
     "@iconify-json/simple-icons": "^1.1.114",
     "@nuxt/content": "^3.0.0",
-    "@nuxt/fonts": "^0.10.3",
+    "@nuxt/fonts": "^0.11.0",
     "@nuxt/image": "^1.9.0",
     "@nuxt/ui-pro": "^3.0.0",
     "nuxt": "^3.13.2",
