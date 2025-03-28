@@ -52,7 +52,7 @@ jobs:
         with:
           version: 9.15.4
 
-      - uses: actions/setup-node@cdca7365b2dadb8aad0a33bc7601856ffabcc48e
+      - uses: actions/setup-node@40337cb8f758cccdfe3475af609daa63f81c7e23
         with:
           version: ${{ matrix.node }}
           cache: ${{ steps.pkgman.outputs.cache }}
