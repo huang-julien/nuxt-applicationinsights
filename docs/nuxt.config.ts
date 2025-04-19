@@ -8,9 +8,13 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/image',
     '@nuxt/ui',
-    '@nuxthq/studio',
     'nuxt-og-image'
   ],
+  content: {
+    preview: {
+      api: 'https://api.nuxt.studio'
+    }
+  },
 
   nitro: {
     prerender: {
