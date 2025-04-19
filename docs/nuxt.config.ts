@@ -1,6 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  extends: ['@nuxt/ui-pro'],
 
   modules: [
     '@nuxt/content',
@@ -8,7 +7,8 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/image',
     '@nuxt/ui',
-    'nuxt-og-image'
+    'nuxt-og-image',
+    '@nuxt/ui-pro'
   ],
   content: {
     preview: {
