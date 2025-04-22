@@ -1,11 +1,8 @@
 <script setup lang="ts">
-import type { ParsedContent } from '@nuxt/content'
-
 const { seo } = useAppConfig()
 
-const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation())
-const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', {
-  default: () => [],
+const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('docs'))
+const { data: files } = useLazyAsyncData('search', () => queryCollectionSearchSections('docs'), {
   server: false
 })
 
@@ -24,8 +21,6 @@ useHead({
 useSeoMeta({
   titleTemplate: `%s - ${seo?.siteName}`,
   ogSiteName: seo?.siteName,
-  ogImage: 'https://docs-template.nuxt.dev/social-card.png',
-  twitterImage: 'https://docs-template.nuxt.dev/social-card.png',
   twitterCard: 'summary_large_image'
 })
 
@@ -33,7 +28,7 @@ provide('navigation', navigation)
 </script>
 
 <template>
-  <div>
+  <UApp>
     <NuxtLoadingIndicator />
 
     <AppHeader />
@@ -52,7 +47,5 @@ provide('navigation', navigation)
         :navigation="navigation"
       />
     </ClientOnly>
-
-    <UNotifications />
-  </div>
+  </UApp>
 </template>

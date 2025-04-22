@@ -1,56 +1,43 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-
   modules: [
-    '@nuxt/content',
     '@nuxt/eslint',
-    '@nuxt/fonts',
     '@nuxt/image',
-    '@nuxt/ui',
+    '@nuxt/ui-pro',
+    '@nuxt/content',
     'nuxt-og-image',
-    '@nuxt/ui-pro'
+    'nuxt-llms'
   ],
-  content: {
-    preview: {
-      api: 'https://api.nuxt.studio'
-    }
-  },
-
-  nitro: {
-    prerender: {
-      concurrency: 1
-    }
-  },
-
-  hooks: {
-    // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
-    'components:extend': (components) => {
-      const globals = components.filter(c => ['UButton', 'UIcon'].includes(c.pascalName))
-
-      globals.forEach(c => c.global = true)
-    }
-  },
-
-  colorMode: {
-    disableTransition: true
-  },
-
-  routeRules: {
-    // Temporary workaround for prerender regression. see https://github.com/nuxt/nuxt/issues/27490
-    '/': { prerender: true },
-    '/api/search.json': { prerender: true }
-  },
 
   devtools: {
     enabled: true
   },
 
-  typescript: {
-    strict: false
+  css: ['~/assets/css/main.css'],
+
+  content: {
+    build: {
+      markdown: {
+        toc: {
+          searchDepth: 1
+        }
+      }
+    }
   },
 
   future: {
     compatibilityVersion: 4
+  },
+
+  compatibilityDate: '2024-07-11',
+
+  nitro: {
+    prerender: {
+      routes: [
+        '/'
+      ],
+      crawlLinks: true
+    }
   },
 
   eslint: {
@@ -62,5 +49,33 @@ export default defineNuxtConfig({
     }
   },
 
-  compatibilityDate: '2024-07-11'
+  icon: {
+    provider: 'iconify'
+  },
+
+  llms: {
+    domain: 'https://docs-template.nuxt.dev/',
+    title: 'Nuxt UI Pro - Docs template',
+    description: 'A template for building documentation with Nuxt UI Pro and Nuxt Content',
+    full: {
+      title: 'Nuxt UI Pro - Docs template Full Documentation',
+      description: 'This is the full documentation for the Nuxt UI Pro - Docs template'
+    },
+    sections: [
+      {
+        title: 'Getting Started',
+        contentCollection: 'docs',
+        contentFilters: [
+          { field: 'path', operator: 'LIKE', value: '/getting-started%' }
+        ]
+      },
+      {
+        title: 'Essentials',
+        contentCollection: 'docs',
+        contentFilters: [
+          { field: 'path', operator: 'LIKE', value: '/essentials%' }
+        ]
+      }
+    ]
+  }
 })
