@@ -1,0 +1,18 @@
+# Nuxt UI Pro - Docs template
+
+> A template for building documentation with Nuxt UI Pro and Nuxt Content
+
+## Documentation Sets
+
+- [Nuxt UI Pro - Docs template Full Documentation](https://docs-template.nuxt.dev//llms-full.txt): This is the full documentation for the Nuxt UI Pro - Docs template
+
+## Getting Started
+
+- [Introduction](https://docs-template.nuxt.dev/getting-started): Welcome to nuxt-applicationinsights documentation
+- [Installation](https://docs-template.nuxt.dev/getting-started/installation): Get started with Applicationinsights for Nuxt
+- [Usage](https://docs-template.nuxt.dev/getting-started/configuration): Learn how to write and customize your documentation.
+- [How does it work](https://docs-template.nuxt.dev/getting-started/how-does-it-work)
+- [Hooks](https://docs-template.nuxt.dev/getting-started/hooks)
+
+## Essentials
+
