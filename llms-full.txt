@@ -46,7 +46,7 @@ Add a client-side plugin to initialize the ApplicationInsights instance and prov
 
 ## \`nitro-applicationinsights\`
 
-See [nitro-applicationinsights runtime config documentation](https://huang-julien-nitro-applicationinsights.nuxt.space/guide/runtime-configuration){rel="nofollow"}
+See [nitro-applicationinsights runtime config documentation](https://nitro-applicationinsights.julien-huang.dev/guide/runtime-configuration){rel="nofollow"}
 
 ## \`nitro-opentelemetry\`
 
@@ -83,4 +83,4 @@ Both SDK provides a similar (almost identical) API so it is easier to track any 
 
 ## Nitro hooks
 
-See [nitro-applicationinsights](https://huang-julien-nitro-applicationinsights.nuxt.space/){rel="nofollow"} and [nitro-opentelemetry](https://github.com/huang-julien/nitro-opentelemetry){rel="nofollow"}.
+See [nitro-applicationinsights](https://nitro-applicationinsights.julien-huang.dev/){rel="nofollow"} and [nitro-opentelemetry](https://github.com/huang-julien/nitro-opentelemetry){rel="nofollow"}.
