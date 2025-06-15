@@ -52,7 +52,7 @@
     "@nuxt/schema": "^3.15.2",
     "@nuxt/test-utils": "^3.7.4",
     "@types/node": "^22.0.0",
-    "changelogen": "^0.5.5",
+    "changelogen": "^0.6.0",
     "eslint": "9.19.0",
     "nitropack": "^2.10.4",
     "nuxt": "^3.15.2",
@@ -60,7 +60,7 @@
     "vitest": "^3.0.0",
     "vue-tsc": "^2.0.19"
   },
-  "packageManager": "pnpm@9.15.4",
+  "packageManager": "pnpm@9.15.9",
   "pnpm": {
     "patchedDependencies": {
       "nitropack": "patches/nitropack.patch"
