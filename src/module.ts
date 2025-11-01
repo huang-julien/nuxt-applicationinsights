@@ -15,7 +15,7 @@ declare module '@nuxt/schema' {
 
 }
 
-declare module '#app' {
+declare module '#app/nuxt' {
     interface RuntimeNuxtHooks {
         'applicationinsights:config:client': (config: Snippet) => void
         'applicationinsights:load:error': (error: Error) => void
