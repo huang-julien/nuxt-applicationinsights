@@ -44,8 +44,7 @@ export default defineNuxtModule<ModuleOptions>({
     configKey: 'applicationinsights',
     compatibility: {
       nuxt: '>=3',
-      bridge: false,
-    }
+    },
   },
   // Default configuration options of the Nuxt module
   defaults: {
