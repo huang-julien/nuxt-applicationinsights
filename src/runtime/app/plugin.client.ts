@@ -1,7 +1,7 @@
 import { defineNuxtPlugin } from "nuxt/app";
 import { ApplicationInsights, } from "@microsoft/applicationinsights-web";
 import type { Snippet } from "@microsoft/applicationinsights-web";
-import type { useNuxtApp } from "#imports";
+import { useNuxtApp } from "#imports";
 import { useRuntimeConfig  } from "#imports";
 import { createFetch } from "ofetch"
 import { baseURL } from "#build/paths.mjs"
@@ -9,7 +9,8 @@ import { toRaw } from "vue"
 
 export default defineNuxtPlugin({
     name: 'nuxt-applicationinsights:client',
-    async setup(nuxtApp) {
+    async setup() {
+        const nuxtApp = useNuxtApp()
         const runtimeConfig = useRuntimeConfig()
         const config: Snippet = {
             config: toRaw(runtimeConfig.public).applicationinsights ?? {}
@@ -21,7 +22,7 @@ export default defineNuxtPlugin({
 
         applicationInsights.addTelemetryInitializer((e) => {
             if(e.baseType === 'PageviewData' && nuxtApp.$router && e.baseData?.uri) {
-                const resolvedRoute = (nuxtApp as ReturnType<typeof useNuxtApp>).$router.resolve(
+                const resolvedRoute = (nuxtApp.$router as any).resolve(
                     new URL(e.baseData.uri).pathname
                  ) 
 

@@ -14,13 +14,15 @@
   ],
   "exports": {
     ".": {
-      "types": "./dist/types.d.ts",
-      "import": "./dist/module.mjs",
-      "require": "./dist/module.cjs"
+      "types": "./dist/types.d.mts",
+      "import": "./dist/module.mjs"
+    },
+    "./runtime/*": {
+      "types": "./dist/runtime/*.d.mts",
+      "import": "./dist/runtime/*.mjs"
     }
   },
-  "main": "./dist/module.cjs",
-  "types": "./dist/types.d.ts",
+  "main": "./dist/module.mjs",
   "files": [
     "dist"
   ],
@@ -39,23 +41,25 @@
     "@microsoft/applicationinsights-core-js": "^3.1.0",
     "@microsoft/applicationinsights-web": "^3.1.0",
     "@nuxt/eslint": "^1.0.0",
+    "@opentelemetry/semantic-conventions": "^1.37.0",
     "applicationinsights": "^3.4.0",
     "defu": "^6.1.2",
     "mlly": "^1.7.4",
-    "nitro-applicationinsights": "^1.0.2"
+    "nitro-applicationinsights": "^1.0.2",
+    "nitro-opentelemetry": "^0.10.1"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxt/eslint-config": "^1.0.0",
-    "@nuxt/kit": "^4.0.0",
-    "@nuxt/module-builder": "^0.8.4",
-    "@nuxt/schema": "^4.0.0",
+    "@nuxt/kit": "^4.2.0",
+    "@nuxt/module-builder": "1.0.2",
+    "@nuxt/schema": "^4.2.0",
     "@nuxt/test-utils": "^3.7.4",
     "@types/node": "^22.0.0",
     "changelogen": "^0.5.5",
     "eslint": "9.19.0",
     "nitropack": "^2.10.4",
-    "nuxt": "^3.15.2",
+    "nuxt": "^4.2.0",
     "nuxt-applicationinsights": "link:./",
     "vitest": "^3.0.0",
     "vue-tsc": "^3.0.0"
