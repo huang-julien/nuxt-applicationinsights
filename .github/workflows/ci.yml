@@ -21,7 +21,7 @@ jobs:
           version: 9.15.4
           run_install: false
       - name: Install Node.js
-        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        uses: actions/setup-node@dda4788290998366da86b6a4f497909644397bb2
         with:
           node-version: 22
           cache: 'pnpm'
