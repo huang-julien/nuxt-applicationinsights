@@ -60,7 +60,7 @@
     "nitropack": "^2.10.4",
     "nuxt": "^4.2.0",
     "nuxt-applicationinsights": "link:./",
-    "vitest": "^3.0.0",
+    "vitest": "^4.0.0",
     "vue-tsc": "^3.0.0"
   },
   "packageManager": "pnpm@9.15.4",
