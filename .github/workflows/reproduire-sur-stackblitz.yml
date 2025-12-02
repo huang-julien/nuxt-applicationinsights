@@ -11,5 +11,5 @@ jobs:
     reproduire-sur-stackblitz:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@ff7abcd0c3c05ccf6adc123a8cd1fd4fb30fb493
+            - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
             - uses: huang-julien/reproduire-sur-stackblitz@edd77eee0ffdae795c9dfd4e5b3b745740672439
