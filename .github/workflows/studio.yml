@@ -50,7 +50,7 @@ jobs:
         name: Install pnpm
         id: pnpm-install
         with:
-          version: 9.15.4
+          version: 11.22.0
 
       - uses: actions/setup-node@dda4788290998366da86b6a4f497909644397bb2
         with:
