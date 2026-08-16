@@ -22,7 +22,7 @@ catalog:
   '@nuxt/eslint-config': ^1.0.0
   '@nuxt/image': ^1.10.0
   '@nuxt/kit': ^4.2.0
-  '@nuxt/module-builder': 1.0.2
+  '@nuxt/module-builder': 1.0.3
   '@nuxt/schema': ^4.2.0
   '@nuxt/test-utils': ^3.7.4
   '@nuxt/ui-pro': ^3.0.2
@@ -30,15 +30,15 @@ catalog:
   '@types/node': ^22.0.0
   applicationinsights: ^3.4.0
   better-sqlite3: ^13.0.0
-  changelogen: ^0.5.5
+  changelogen: ^0.6.0
   defu: ^6.1.2
-  eslint: 9.39.0
+  eslint: 9.39.5
   mlly: ^1.7.4
   nitro-applicationinsights: ^1.0.2
   nitro-opentelemetry: ^0.10.1
   nitropack: ^2.10.4
   nuxt: ^4.2.0
-  nuxt-llms: 0.1.2
+  nuxt-llms: 0.2.0
   nuxt-og-image: ^5.1.1
   typescript: ^5.8.2
   vitest: ^3.0.0
