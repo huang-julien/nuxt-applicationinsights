@@ -1,9 +1,19 @@
 import { defineNuxtModule, createResolver, addServerPlugin, addPlugin } from '@nuxt/kit'
 import { resolvePath } from "mlly"
 import { defu } from 'defu'
-import type { RuntimeConfig } from '@nuxt/schema'
 import type { Snippet } from "@microsoft/applicationinsights-web";
 import type { TNitroAppInsightsConfig } from "nitro-applicationinsights";
+
+declare module 'nuxt/schema' {
+    interface RuntimeConfig {
+        applicationinsights: Partial<TNitroAppInsightsConfig>
+    }
+
+    interface PublicRuntimeConfig {
+        applicationinsights: Partial<Snippet['config']>
+    }
+}
+
 declare module '@nuxt/schema' {
     interface RuntimeConfig {
         applicationinsights: Partial<TNitroAppInsightsConfig>
@@ -55,16 +65,15 @@ export default defineNuxtModule<ModuleOptions>({
     const resolver = createResolver(import.meta.url)
 
     if (options.connectionString) {
-      nuxt.options.runtimeConfig = defu(nuxt.options.runtimeConfig, {
-        public: {
-          applicationinsights: {
-            connectionString: options.connectionString
-          }
-        },
-        applicationinsights: {
-          connectionString: options.connectionString
-        }
-      }) as RuntimeConfig
+      nuxt.options.runtimeConfig.applicationinsights = defu(
+        nuxt.options.runtimeConfig.applicationinsights,
+        { connectionString: options.connectionString }
+      )
+
+      nuxt.options.runtimeConfig.public.applicationinsights = defu(
+        nuxt.options.runtimeConfig.public.applicationinsights,
+        { connectionString: options.connectionString }
+      )
     }
 
     if (options.serverEnabled) {
