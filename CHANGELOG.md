@@ -1,6 +1,60 @@
 # Changelog
 
 
+## v1.0.2
+
+[compare changes](https://github.com/huang-julien/nuxt-applicationinsights/compare/v1.0.1...v1.0.2)
+
+### 🩹 Fixes
+
+- **deps:** Update all non-major dependencies ([#132](https://github.com/huang-julien/nuxt-applicationinsights/pull/132))
+- **deps:** Update dependency @nuxt/content to v3 ([#121](https://github.com/huang-julien/nuxt-applicationinsights/pull/121))
+- **deps:** Update dependency @nuxt/ui-pro to v3 ([#136](https://github.com/huang-julien/nuxt-applicationinsights/pull/136))
+- **deps:** Update all non-major dependencies ([#145](https://github.com/huang-julien/nuxt-applicationinsights/pull/145))
+- **deps:** Update all non-major dependencies ([#146](https://github.com/huang-julien/nuxt-applicationinsights/pull/146))
+- **deps:** Update dependency nuxt-og-image to v5 ([#135](https://github.com/huang-julien/nuxt-applicationinsights/pull/135))
+- **docs:** Use content V3 and remove studio ([ff7a31a](https://github.com/huang-julien/nuxt-applicationinsights/commit/ff7a31a))
+- **docs:** Extends config ([5f4bbdf](https://github.com/huang-julien/nuxt-applicationinsights/commit/5f4bbdf))
+- **deps:** Update all non-major dependencies ([#148](https://github.com/huang-julien/nuxt-applicationinsights/pull/148))
+- **deps:** Update all non-major dependencies ([#155](https://github.com/huang-julien/nuxt-applicationinsights/pull/155))
+- **deps:** Update all non-major dependencies ([#156](https://github.com/huang-julien/nuxt-applicationinsights/pull/156))
+- **deps:** Update all non-major dependencies ([#157](https://github.com/huang-julien/nuxt-applicationinsights/pull/157))
+- **deps:** Update all non-major dependencies ([#159](https://github.com/huang-julien/nuxt-applicationinsights/pull/159))
+- **deps:** Update all non-major dependencies ([#162](https://github.com/huang-julien/nuxt-applicationinsights/pull/162))
+- **deps:** Update all non-major dependencies ([#163](https://github.com/huang-julien/nuxt-applicationinsights/pull/163))
+- **deps:** Update all non-major dependencies ([#164](https://github.com/huang-julien/nuxt-applicationinsights/pull/164))
+- **devtools:** Remove obsolete devtools package to avoid conflicts ([#174](https://github.com/huang-julien/nuxt-applicationinsights/pull/174))
+- Import defineNuxtPlugin from nuxt/app ([#208](https://github.com/huang-julien/nuxt-applicationinsights/pull/208))
+
+### 📖 Documentation
+
+- Create SECURITY.md ([73e4cfa](https://github.com/huang-julien/nuxt-applicationinsights/commit/73e4cfa))
+- **README:** Remove Nuxt version ([#140](https://github.com/huang-julien/nuxt-applicationinsights/pull/140))
+- Update template ([416d612](https://github.com/huang-julien/nuxt-applicationinsights/commit/416d612))
+- Update nitro-applicationinsights docs links ([e92956b](https://github.com/huang-julien/nuxt-applicationinsights/commit/e92956b))
+- Remove import.meta.server around defineOgImageComponent ([b4c198b](https://github.com/huang-julien/nuxt-applicationinsights/commit/b4c198b))
+- Fix links ([809210d](https://github.com/huang-julien/nuxt-applicationinsights/commit/809210d))
+
+### 🏡 Chore
+
+- **release:** V1.0.1 ([cc29dd9](https://github.com/huang-julien/nuxt-applicationinsights/commit/cc29dd9))
+- **deps-dev:** Bump @nuxt/devtools ([#134](https://github.com/huang-julien/nuxt-applicationinsights/pull/134))
+- Update license date ([f0e7de8](https://github.com/huang-julien/nuxt-applicationinsights/commit/f0e7de8))
+- **deps-dev:** Bump @nuxt/devtools ([#153](https://github.com/huang-julien/nuxt-applicationinsights/pull/153))
+- Rename main branch to main ([#166](https://github.com/huang-julien/nuxt-applicationinsights/pull/166))
+
+### 🤖 CI
+
+- Reference action by commit hash ([#139](https://github.com/huang-julien/nuxt-applicationinsights/pull/139))
+- **docs:** Remove nuxthq/studio ([f30b02b](https://github.com/huang-julien/nuxt-applicationinsights/commit/f30b02b))
+- **docs:** Fix deploy path ([ff9f681](https://github.com/huang-julien/nuxt-applicationinsights/commit/ff9f681))
+- **studio:** Fix ghpagedepoy version ([9d4b2ec](https://github.com/huang-julien/nuxt-applicationinsights/commit/9d4b2ec))
+
+### ❤️ Contributors
+
+- Julien Huang ([@huang-julien](https://github.com/huang-julien))
+- Maurits Meester ([@mmeester](https://github.com/mmeester))
+
 ## v1.0.1
 
 [compare changes](https://github.com/huang-julien/nuxt-applicationinsights/compare/v1.0.0...v1.0.1)
