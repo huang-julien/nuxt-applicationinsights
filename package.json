@@ -63,10 +63,5 @@
     "vitest": "catalog:",
     "vue-tsc": "catalog:"
   },
-  "packageManager": "pnpm@11.22.0",
-  "pnpm": {
-    "patchedDependencies": {
-      "nitropack": "patches/nitropack.patch"
-    }
-  }
+  "packageManager": "pnpm@11.22.0"
 }

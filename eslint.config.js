@@ -5,6 +5,8 @@ export default withNuxt({
         'vue/multi-word-component-names': 'off',
         '@typescript-eslint/unified-signatures': 'off',
     },
+}).prepend({
+    // `ignores` is only a global ignore when it is the sole key of its config object
     ignores: [
         'dist',
         'node_modules',
