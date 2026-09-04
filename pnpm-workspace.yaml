@@ -32,7 +32,7 @@ catalog:
   better-sqlite3: ^13.0.0
   changelogen: ^0.6.0
   defu: ^6.1.2
-  eslint: 9.39.5
+  eslint: 10.10.0
   mlly: ^1.7.4
   nitro-applicationinsights: ^1.0.2
   nitro-opentelemetry: ^0.10.1
